@@ -1,0 +1,3265 @@
+DEBUG log :: inserting:0
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 0  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:1
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 1  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:2
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 2  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:3
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 3  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:4
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 4  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:5
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 5  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:6
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 6  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:7
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 7  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:8
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 8  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:9
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 9  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:10
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:11
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:12
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:13
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:14
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:15
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:16
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+10  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:17
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+11  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:18
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+12  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:19
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+13  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:20
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+14  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:21
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+15  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:22
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+16  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:23
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+17  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:24
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+18  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:25
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+19  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:26
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:27
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:28
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:29
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:30
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:31
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:32
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+20  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:33
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+21  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:34
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+22  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:35
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+23  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:36
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+24  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:37
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+25  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:38
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+26  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:39
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+27  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:40
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+28  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:41
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+29  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:42
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:43
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:44
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:45
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:46
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:47
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:48
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+30  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:49
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+31  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:50
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+32  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:51
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+33  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:52
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+34  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:53
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+35  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:54
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+36  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:55
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+37  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:56
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+38  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:57
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+39  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:58
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:59
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:60
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:61
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:62
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:63
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:64
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+40  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:65
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+41  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:66
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+42  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:67
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+43  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:68
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+44  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:69
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+45  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:70
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+46  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:71
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+47  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:72
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+48  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:73
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+49  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:74
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:75
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:76
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:77
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:78
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:79
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:80
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+50  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:81
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+51  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:82
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+52  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:83
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+53  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:84
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+54  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:85
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+55  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:86
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+56  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:87
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+57  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:88
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+58  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:89
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+59  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:90
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:91
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:92
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:93
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:94
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:95
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:96
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+60  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:97
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+61  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:98
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+62  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:99
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+63  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:100
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+64  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:101
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+65  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:102
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+66  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:103
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+67  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:104
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+68  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:105
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+69  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:106
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:107
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:108
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:109
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:110
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:111
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:112
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+70  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:113
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+71  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:114
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+72  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:115
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+73  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:116
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+74  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:117
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+75  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:118
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+76  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:119
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+77  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:120
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+78  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:121
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+79  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:122
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:123
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:124
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:125
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:126
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:127
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:128
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff80  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:129
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff81  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:130
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff82  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:131
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff83  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:132
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff84  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:133
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff85  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:134
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff86  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:135
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff87  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:136
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff88  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:137
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff89  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:138
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:139
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:140
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:141
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:142
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:143
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:144
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff90  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:145
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff91  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:146
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff92  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:147
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff93  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:148
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff94  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:149
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff95  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:150
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff96  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:151
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff97  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:152
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff98  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:153
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff99  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:154
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9a  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:155
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9b  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:156
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9c  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:157
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9d  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:158
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9e  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:159
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9f  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:160
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa0  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:161
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa1  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:162
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa2  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:163
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa3  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:164
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa4  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:165
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa5  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:166
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa6  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:167
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa7  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:168
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa8  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:169
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa9  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:170
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffaa  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:171
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffab  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:172
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffac  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:173
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffad  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:174
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffae  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:175
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffaf  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:176
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb0  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:177
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb1  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:178
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb2  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:179
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb3  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:180
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb4  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:181
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb5  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:182
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb6  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:183
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb7  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:184
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb8  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:185
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb9  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:186
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffba  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:187
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbb  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:188
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbc  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:189
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbd  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:190
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbe  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:191
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbf  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:192
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc0  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:193
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc1  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:194
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc2  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:195
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc3  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:196
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc4  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:197
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc5  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:198
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc6  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:199
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc7  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:200
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc8  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:201
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc9  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:202
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffca  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:203
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcb  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:204
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcc  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:205
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcd  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:206
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffce  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:207
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcf  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:208
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd0  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:209
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd1  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:210
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd2  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:211
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd3  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:212
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd4  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:213
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd5  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:214
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd6  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:215
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd7  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:216
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd8  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:217
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd9  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:218
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffda  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:219
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdb  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:220
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdc  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:221
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdd  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:222
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffde  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:223
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdf  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:224
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe0  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:225
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe1  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:226
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe2  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:227
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe3  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:228
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe4  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:229
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe5  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:230
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe6  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:231
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe7  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:232
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe8  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:233
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe9  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:234
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffea  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:235
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffeb  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:236
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffec  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:237
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffed  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:238
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffee  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:239
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffef  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:240
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff0  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:241
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff1  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:242
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff2  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:243
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff3  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:244
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff4  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:245
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff5  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:246
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff6  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:247
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff7  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:248
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff8  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:249
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff9  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:250
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffa  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:251
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffb  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:252
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffc  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:253
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffd  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:254
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffe  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:255
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffff  0  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:256
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 0  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:257
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 1  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:258
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 2  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:259
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 3  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:260
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 4  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:261
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 5  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:262
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 6  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:263
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 7  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:264
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 8  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:265
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 9  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:266
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:267
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:268
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:269
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:270
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:271
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:272
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+10  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:273
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+11  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:274
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+12  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:275
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+13  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:276
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+14  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:277
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+15  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:278
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+16  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:279
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+17  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:280
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+18  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:281
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+19  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:282
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:283
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:284
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:285
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:286
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:287
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:288
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+20  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:289
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+21  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:290
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+22  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:291
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+23  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:292
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+24  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:293
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+25  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:294
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+26  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:295
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+27  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:296
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+28  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:297
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+29  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:298
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:299
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:300
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:301
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:302
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:303
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:304
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+30  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:305
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+31  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:306
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+32  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:307
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+33  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:308
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+34  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:309
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+35  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:310
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+36  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:311
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+37  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:312
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+38  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:313
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+39  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:314
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:315
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:316
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:317
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:318
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:319
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:320
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+40  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:321
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+41  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:322
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+42  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:323
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+43  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:324
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+44  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:325
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+45  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:326
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+46  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:327
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+47  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:328
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+48  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:329
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+49  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:330
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:331
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:332
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:333
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:334
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:335
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:336
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+50  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:337
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+51  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:338
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+52  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:339
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+53  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:340
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+54  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:341
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+55  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:342
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+56  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:343
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+57  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:344
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+58  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:345
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+59  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:346
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:347
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:348
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:349
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:350
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:351
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:352
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+60  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:353
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+61  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:354
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+62  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:355
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+63  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:356
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+64  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:357
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+65  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:358
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+66  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:359
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+67  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:360
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+68  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:361
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+69  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:362
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:363
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:364
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:365
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:366
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:367
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:368
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+70  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:369
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+71  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:370
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+72  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:371
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+73  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:372
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+74  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:373
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+75  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:374
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+76  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:375
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+77  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:376
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+78  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:377
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+79  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:378
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:379
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:380
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:381
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:382
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:383
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:384
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff80  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:385
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff81  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:386
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff82  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:387
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff83  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:388
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff84  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:389
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff85  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:390
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff86  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:391
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff87  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:392
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff88  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:393
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff89  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:394
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:395
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:396
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:397
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:398
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:399
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:400
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff90  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:401
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff91  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:402
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff92  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:403
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff93  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:404
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff94  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:405
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff95  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:406
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff96  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:407
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff97  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:408
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff98  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:409
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff99  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:410
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9a  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:411
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9b  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:412
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9c  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:413
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9d  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:414
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9e  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:415
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9f  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:416
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa0  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:417
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa1  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:418
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa2  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:419
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa3  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:420
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa4  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:421
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa5  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:422
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa6  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:423
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa7  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:424
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa8  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:425
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa9  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:426
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffaa  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:427
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffab  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:428
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffac  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:429
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffad  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:430
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffae  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:431
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffaf  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:432
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb0  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:433
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb1  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:434
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb2  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:435
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb3  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:436
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb4  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:437
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb5  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:438
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb6  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:439
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb7  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:440
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb8  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:441
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb9  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:442
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffba  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:443
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbb  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:444
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbc  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:445
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbd  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:446
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbe  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:447
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbf  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:448
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc0  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:449
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc1  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:450
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc2  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:451
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc3  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:452
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc4  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:453
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc5  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:454
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc6  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:455
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc7  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:456
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc8  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:457
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc9  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:458
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffca  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:459
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcb  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:460
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcc  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:461
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcd  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:462
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffce  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:463
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcf  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:464
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd0  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:465
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd1  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:466
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd2  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:467
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd3  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:468
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd4  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:469
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd5  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:470
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd6  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:471
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd7  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:472
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd8  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:473
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd9  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:474
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffda  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:475
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdb  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:476
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdc  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:477
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdd  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:478
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffde  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:479
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdf  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:480
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe0  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:481
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe1  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:482
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe2  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:483
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe3  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:484
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe4  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:485
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe5  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:486
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe6  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:487
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe7  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:488
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe8  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:489
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe9  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:490
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffea  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:491
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffeb  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:492
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffec  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:493
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffed  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:494
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffee  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:495
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffef  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:496
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff0  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:497
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff1  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:498
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff2  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:499
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff3  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:500
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff4  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:501
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff5  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:502
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff6  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:503
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff7  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:504
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff8  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:505
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff9  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:506
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffa  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:507
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffb  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:508
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffc  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:509
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffd  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:510
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffe  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:511
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffff  1  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:512
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 0  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:513
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 1  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:514
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 2  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:515
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 3  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:516
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 4  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:517
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 5  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:518
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 6  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:519
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 7  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:520
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 8  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:521
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 9  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:522
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:523
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:524
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:525
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:526
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:527
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:528
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+10  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:529
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+11  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:530
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+12  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:531
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+13  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:532
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+14  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:533
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+15  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:534
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+16  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:535
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+17  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:536
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+18  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:537
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+19  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:538
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:539
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:540
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:541
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:542
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:543
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:544
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+20  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:545
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+21  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:546
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+22  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:547
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+23  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:548
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+24  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:549
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+25  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:550
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+26  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:551
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+27  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:552
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+28  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:553
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+29  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:554
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:555
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:556
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:557
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:558
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:559
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:560
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+30  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:561
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+31  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:562
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+32  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:563
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+33  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:564
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+34  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:565
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+35  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:566
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+36  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:567
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+37  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:568
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+38  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:569
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+39  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:570
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:571
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:572
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:573
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:574
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:575
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+3f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:576
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+40  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:577
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+41  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:578
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+42  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:579
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+43  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:580
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+44  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:581
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+45  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:582
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+46  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:583
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+47  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:584
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+48  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:585
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+49  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:586
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:587
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:588
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:589
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:590
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:591
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+4f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:592
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+50  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:593
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+51  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:594
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+52  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:595
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+53  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:596
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+54  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:597
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+55  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:598
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+56  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:599
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+57  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:600
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+58  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:601
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+59  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:602
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:603
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:604
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:605
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:606
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:607
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+5f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:608
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+60  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:609
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+61  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:610
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+62  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:611
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+63  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:612
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+64  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:613
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+65  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:614
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+66  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:615
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+67  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:616
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+68  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:617
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+69  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:618
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:619
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:620
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:621
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:622
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:623
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+6f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:624
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+70  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:625
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+71  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:626
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+72  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:627
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+73  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:628
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+74  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:629
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+75  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:630
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+76  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:631
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+77  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:632
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+78  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:633
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+79  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:634
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:635
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:636
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:637
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:638
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:639
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+7f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:640
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff80  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:641
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff81  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:642
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff82  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:643
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff83  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:644
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff84  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:645
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff85  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:646
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff86  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:647
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff87  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:648
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff88  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:649
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff89  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:650
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:651
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:652
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:653
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:654
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:655
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff8f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:656
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff90  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:657
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff91  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:658
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff92  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:659
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff93  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:660
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff94  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:661
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff95  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:662
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff96  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:663
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff97  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:664
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff98  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:665
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff99  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:666
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9a  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:667
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9b  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:668
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9c  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:669
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9d  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:670
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9e  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:671
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffff9f  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:672
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa0  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:673
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa1  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:674
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa2  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:675
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa3  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:676
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa4  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:677
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa5  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:678
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa6  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:679
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa7  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:680
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa8  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:681
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffa9  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:682
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffaa  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:683
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffab  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:684
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffac  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:685
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffad  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:686
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffae  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:687
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffaf  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:688
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb0  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:689
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb1  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:690
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb2  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:691
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb3  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:692
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb4  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:693
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb5  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:694
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb6  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:695
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb7  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:696
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb8  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:697
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffb9  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:698
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffba  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:699
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbb  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:700
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbc  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:701
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbd  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:702
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbe  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:703
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffbf  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:704
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc0  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:705
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc1  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:706
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc2  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:707
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc3  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:708
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc4  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:709
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc5  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:710
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc6  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:711
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc7  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:712
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc8  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:713
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffc9  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:714
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffca  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:715
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcb  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:716
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcc  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:717
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcd  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:718
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffce  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:719
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffcf  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:720
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd0  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:721
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd1  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:722
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd2  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:723
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd3  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:724
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd4  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:725
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd5  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:726
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd6  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:727
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd7  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:728
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd8  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:729
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffd9  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:730
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffda  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:731
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdb  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:732
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdc  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:733
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdd  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:734
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffde  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:735
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffdf  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:736
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe0  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:737
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe1  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:738
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe2  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:739
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe3  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:740
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe4  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:741
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe5  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:742
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe6  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:743
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe7  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:744
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe8  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:745
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffe9  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:746
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffea  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:747
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffeb  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:748
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffec  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:749
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffed  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:750
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffee  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:751
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffef  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:752
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff0  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:753
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff1  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:754
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff2  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:755
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff3  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:756
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff4  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:757
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff5  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:758
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff6  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:759
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff7  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:760
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff8  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:761
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffff9  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:762
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffa  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:763
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffb  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:764
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffc  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:765
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffd  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:766
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+fffffffe  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:767
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ffffffff  2  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:768
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 0  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:769
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 1  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:770
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 2  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:771
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 3  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:772
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 4  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:773
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 5  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:774
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 6  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:775
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 7  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:776
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 8  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:777
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ 9  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:778
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ a  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:779
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ b  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:780
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ c  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:781
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ d  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:782
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ e  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:783
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+ f  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:784
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+10  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:785
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+11  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:786
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+12  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:787
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+13  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:788
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+14  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:789
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+15  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:790
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+16  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:791
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+17  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:792
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+18  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:793
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+19  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:794
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1a  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:795
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1b  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:796
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1c  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:797
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1d  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:798
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1e  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:799
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+1f  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:800
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+20  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:801
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+21  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:802
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+22  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:803
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+23  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:804
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+24  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:805
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+25  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:806
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+26  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:807
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+27  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:808
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+28  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:809
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+29  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:810
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2a  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:811
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2b  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:812
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2c  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:813
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2d  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:814
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2e  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####DEBUG log :: inserting:815
+##### Start Printing splayArray Status #####
+n? : 22   ;   maxSize?: 40
+Array Content(16): 
+2f  3  0  0  0  0  0  0  a  0  0  0 54 45 53 54 53 49 47 4e 41 4c ##### Print End #####
