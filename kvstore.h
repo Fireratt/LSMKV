@@ -29,7 +29,7 @@ private:
 	// The head of vlog (the size of the file)
 	int head ; 
 	// The directory of sstable and the name of vlog
-	const std::string sstableDir ;
+	std::string sstableDir ;
 	const std::string vlog ; 
 	// The Number of Cached sstable
 	int cached ;
@@ -43,6 +43,8 @@ private:
 	BloomFilter * bloomFilter ; 
 	// the vlog's file descriptor
 	FILE * vlogFile ;
+	// the files that had been loaded in the cache 
+	std::vector<std::string> cachedSS ; 
 
 	
 public:
@@ -61,8 +63,8 @@ public:
 	void scan(uint64_t key1, uint64_t key2, std::list<std::pair<uint64_t, std::string>> &list) override;
 
 	void gc(uint64_t chunk_size) override;
- // Push the MemTable into the ssTable and vlog ; the naming rules : use max and min key to name ; 
-	void saveMem() const ;
+ // Push the MemTable into the ssTable and vlog ; the naming rules : use max and min key to name ; return the name of sstable
+	FILE*  saveMem() const ;
 
 //	initailize the cache until there is no sstable/cache full 
 	void initCache(const std::string & dir , const std::vector<std::string>& sstables) ;

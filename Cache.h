@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include "Constants.h"
 #include "BloomFilter.h"
-#define DEBUG
+// #define DEBUG
 class Cache
 {
     private : 

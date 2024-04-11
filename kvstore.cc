@@ -1,17 +1,22 @@
 #include "kvstore.h"
-KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(dir, vlog),sstableDir(dir) , vlog(vlog),cached(0)
+KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(dir, vlog) , vlog(vlog),cached(0)
 {
 	// initialize memTable
-
+	sstableDir = dir.c_str() +std::string( "/level-0")  ; 
 	memtable = new skiplist::skiplist_type(0.5) ; 
 	cache = new Cache(CACHE_SIZE,MAX_SIZE);
 	bloomFilter = new BloomFilter(bloomSize,4);
+
 	if(utils::dirExists(dir))
 	{
 		// read the directory and restart system
+		if(!utils::dirExists(sstableDir))
+		{
+			utils::mkdir(sstableDir) ; 
+		}
 		tail = 0 ; 
 		std::vector<std::string> ret ; 
-		utils::scanDir(dir,ret) ; 
+		utils::scanDir(sstableDir,ret) ; 
 		// traverse the whole directory's name
 		auto end = ret.end() ; 
 		int vlogChecked = 0 ; 
@@ -23,8 +28,12 @@ KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(d
 				cached++ ; 
 			}
 		}
+					        #ifdef DEBUG
+            printf("DEBUG::Cursor Moving!\n")  ; 
+        #endif 
 		initVlog() ; 
-		initCache(dir,ret) ;
+		initCache(sstableDir,ret) ;
+
 
 		return ; 
 	}
@@ -45,13 +54,19 @@ void KVStore::put(uint64_t key, const std::string &s)
 
 	if(SIZE(memtable->size()+1)>MAX_SIZE)
 	{
-		saveMem() ; 
+		FILE* ssFile = saveMem() ; 
 		#ifdef DEBUG
 			// printf("LOG: CALL RESET\n") ; 
 			// printf("LOG: Current SIZE?:%d n?:%d\n",SIZE(memtable->size()+1),memtable->size()) ; 
 		#endif
+		if(ssFile)
+		{
+			cache->loadCache(ssFile) ; 
+		}
 		memtable->reset() ; 						// remove memtable 
 		bloomFilter->reset() ; 						// remove BF
+		// cache the new sstable. 
+		
 	}
 	memtable->put(key,s) ; 
 	bloomFilter->insert(key) ; 
@@ -62,10 +77,15 @@ void KVStore::put(uint64_t key, const std::string &s)
  */
 std::string KVStore::get(uint64_t key)
 {			
-	std::string result ; 				
+	std::string result ; 
 	if(bloomFilter->isInclude(key))
 	{
+
 		result = memtable->get(key) ; 
+		#ifdef DEBUG
+			if(key == 408)
+                printf("408 in BF!, result?%s\n:",result.c_str()) ; 
+        #endif
 	}
 	else
 	{
@@ -93,9 +113,17 @@ std::string KVStore::get(uint64_t key)
 			rewind(vlogFile) ; 
 			fseek(vlogFile, VLOG_HEAD + vlogOffset , SEEK_SET) ; 
 			fread(buffer,length,1,vlogFile) ; 
+			// give an end
+			buffer[length] = 0 ;
 			result.append(std::string(buffer)) ; 
+			// find in cache , return 
+			return result ; 
 		}
-
+	}
+	// cant find in cache
+	if(result == "")
+	{
+		
 	}
 	return result ; 
 }	
@@ -121,6 +149,16 @@ bool KVStore::del(uint64_t key)
 void KVStore::reset()
 {
 	memtable->reset() ; 
+	// delete all sstable 
+	std::vector<std::string> ret ; 
+	utils::scanDir(sstableDir,ret) ; 
+	auto end = ret.end() ; 
+	for (auto i = ret.begin() ; i!=end ; i++)
+	{
+		utils::rmfile(sstableDir + "/"+*i) ; 
+	}
+	utils::rmdir(sstableDir) ;
+	utils::rmfile(vlog) ; 
 }
 
 /**
@@ -152,11 +190,11 @@ void KVStore::gc(uint64_t chunk_size)
 {
 }
 
-void KVStore::saveMem() const 
+FILE*  KVStore::saveMem() const 
 {
 	if(memtable->isEmpty())
 	{
-		return ; 
+		return 0; 
 	}
 	std::string name = sstableDir ; 
 	if(!utils::dirExists(name))
@@ -175,10 +213,11 @@ void KVStore::saveMem() const
 
 	outputTables(sstable,vlog , F_sstable , vlogFile) ; 
 // end
-
+	
 	free(sstable) ; 
+	free(buffer) ; 
 	delete vlog ; 
-	fclose(F_sstable) ; 
+	return F_sstable ; 
 }
 
 

@@ -22,6 +22,7 @@ void Cache::loadCache(FILE* toLoad)
     int len = ftell(toLoad) ; 
     if(len > unitSize)                              // should not occur when the sstable's writing is normally
     {
+        printf("filelength:%d\n",len) ; 
         throw "DETECT SSTABLE SIZE OVERFLOW!\n Loading Cache END" ; 
     }
 
@@ -149,7 +150,7 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
                 return pos ; 
             }
         }
-    }  
+    }
     return -1 ;
 }
 
