@@ -10,7 +10,7 @@ int main()
     {
         // printf("inserting::%d\n" , i) ; 
         // fflush(stdout)  ; 
-        testMemTable.put(i,"TEST_SIGNALS") ; 
+        printf("Main:Reading:%s\n" , testMemTable.get(i).c_str()) ; 
     }
     return 0 ; 
 }

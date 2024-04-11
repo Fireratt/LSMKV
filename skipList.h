@@ -65,7 +65,8 @@ class skiplist_type
 		skiplist_node* max() const ; 
 		// reset the whole skipList 
 		void reset() ; 
-		// 
+		// check if skipList is empty 
+		bool isEmpty() ; 
 };	
 
 } // namespace skiplist

@@ -9,6 +9,7 @@ correctness: kvstore.o correctness.o skipList.o splayArray.o Cache.o BloomFilter
 persistence: kvstore.o persistence.o skipList.o splayArray.o Cache.o BloomFilter.o
 
 skipListTest: kvstore.o skipList.o skipListTest.o tools.o splayArray.o Cache.o BloomFilter.o
- 
+
+testRead: kvstore.o skipList.o testRead.o tools.o splayArray.o Cache.o BloomFilter.o
 clean:
 	-rm -f correctness persistence *.o

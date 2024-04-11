@@ -26,7 +26,10 @@ class BloomFilter
         int isInclude(uint64_t key) ;                               // check if the key is in the set . it may be not correct someTimes.
         // Use extern array . and judge if a key is in the filter according to the array
         bool isInclude(char * array , uint64_t key) const ; 
-
+        // reset the BF to the start status
+        void reset () ; 
+        // get the array's pointer
+        char* access() ; 
 } ; 
 
 #endif

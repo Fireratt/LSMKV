@@ -303,7 +303,10 @@ void skiplist_type::reset()
     topTail = tail ; 
 }
 
-
+bool skiplist_type::isEmpty()
+{
+    return n==0 ; 
+}
 
 
 

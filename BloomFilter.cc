@@ -10,7 +10,14 @@ hashNumber(hashSize)
         hashArray[i] = 0 ; 
     }
 }
-
+void BloomFilter::reset()
+{
+    // set value to zero
+    for(uint64_t i = 0 ; i < arraySize ; i++)
+    {
+        hashArray[i] = 0 ; 
+    }
+}
 int BloomFilter::insert(uint64_t key)
 {
     uint64_t hashResult[2] = {0} ;                  // to call the MurmurHash3
@@ -137,4 +144,9 @@ bool BloomFilter::isInclude(char * array , uint64_t key) const
     ret++ ; 
     return 1 ; 
 
+}
+
+char * BloomFilter::access()
+{
+    return hashArray ; 
 }

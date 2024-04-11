@@ -4,10 +4,9 @@
 #include <stdint.h>
 #include "Constants.h"
 #include "BloomFilter.h"
-// #define DEBUG
+#define DEBUG
 class Cache
 {
-    // The Cache should always In a up order according to the sstable's min value
     private : 
         int n ;                                 // Max Number in the Cache
         char ** memory ;                        // The save in the Cache; Ending signal is \0
@@ -30,5 +29,7 @@ class Cache
         bool isfull() ;                         // Judge if a Cache is full 
 
         // get the true cache index ; if it cant find , return -1  ; it will return the offset of the key's exact location in the para
-        int access(uint64_t key,const BloomFilter & judger , int & offset) ; 
+        int access(uint64_t key,const BloomFilter *judger , int & offset) ; 
+        // get the memory in the index 
+        char * access(int index) ; 
 };

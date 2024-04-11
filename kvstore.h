@@ -10,7 +10,7 @@
 #include "Constants.h"
 #include "Cache.h"
 // get the memtable's current size ;
-// #define DEBUG
+#define DEBUG
 
 class KVStore : public KVStoreAPI
 {
@@ -29,8 +29,8 @@ private:
 	// The head of vlog (the size of the file)
 	int head ; 
 	// The directory of sstable and the name of vlog
-	const std::string & sstableDir ;
-	const std::string & vlog ; 
+	const std::string sstableDir ;
+	const std::string vlog ; 
 	// The Number of Cached sstable
 	int cached ;
 	// initialize the tail and head of the vlog
@@ -41,6 +41,8 @@ private:
 	Cache * cache ; 
 	// the bloom filter of the memtable ; it will be used by outside array to judge as well
 	BloomFilter * bloomFilter ; 
+	// the vlog's file descriptor
+	FILE * vlogFile ;
 
 	
 public:
@@ -63,5 +65,5 @@ public:
 	void saveMem() const ;
 
 //	initailize the cache until there is no sstable/cache full 
-	void initCache(const std::vector<std::string>& sstables) ;
+	void initCache(const std::string & dir , const std::vector<std::string>& sstables) ;
 };
