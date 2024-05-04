@@ -78,14 +78,15 @@ void KVStore::put(uint64_t key, const std::string &s)
 std::string KVStore::get(uint64_t key)
 {			
 	std::string result ; 
+		#ifdef DEBUG
+			if(key == 407)
+                printf("407 in process!!, result?%s\n:",result.c_str()) ; 
+        #endif
 	if(bloomFilter->isInclude(key))
 	{
 
 		result = memtable->get(key) ; 
-		#ifdef DEBUG
-			if(key == 408)
-                printf("408 in BF!, result?%s\n:",result.c_str()) ; 
-        #endif
+
 	}
 	else
 	{

@@ -144,9 +144,9 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
             {
                 LRU_TIME[pos] = 0 ; 
                 increaseTime() ; 
-                #ifdef DEBUG
-                    printf("DEBUG:: Cache::Access:pos= %d offset = %d \n" , pos , offset) ; 
-                #endif
+                // #ifdef DEBUG
+                //     printf("DEBUG:: Cache::Access:pos= %d offset = %d \n" , pos , offset) ; 
+                // #endif
                 return pos ; 
             }
         }
@@ -174,7 +174,10 @@ int Cache::searchIndex(uint64_t key , int index)
                 printf("DEBUG:: Cache::SearchIndex:midKey = %lu mid = %d retVal = %d\n"
                 ,midKey , mid , KEY_INDEX(mid,offset)) ; 
                             #endif
-
+        if(tail == key)// our head is mid + 1 and round below ; it will make the tail cant find 
+        {
+            return KEY_INDEX(tail,offset) ; 
+        }
         if(midKey == key)
         {
 
@@ -187,7 +190,7 @@ int Cache::searchIndex(uint64_t key , int index)
         }
         else 
         {
-            tail = mid ; 
+            tail = mid; 
         }
     }
     return -1 ; 
