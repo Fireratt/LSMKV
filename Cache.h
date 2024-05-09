@@ -4,15 +4,17 @@
 #include <stdint.h>
 #include "Constants.h"
 #include "BloomFilter.h"
-#define DEBUG
+// #define DEBUG
 class Cache
 {
     private : 
+        
         int n ;                                 // Max Number in the Cache
         char ** memory ;                        // The save in the Cache; Ending signal is \0
         int * LRU_TIME ;                        // Save the time since last access
-        int unitSize ;                          // each memory location's size . 
+        int unitSize ;                          // each memory location's size . unit:byte
         int loaded ;                            // current loaded Number ; 
+        BloomFilter * bf ;                      // the bloomFilter used to check for the key ; it will use a static method 
         // void replaceCache(FILE * toLoad) ;      // evict the cache and read a new table ; the evict method is LRU
         int getReplaceIndex();                  // get the next place to insert cache.
         uint64_t getMin(int index) ;            // get the minimun key of a sstable
@@ -24,7 +26,7 @@ class Cache
         // memory[index] dont have the key => return -1 . else return the offset of the key 
         int searchIndex(uint64_t key , int index) ; 
     public :
-        Cache(int n , int unitSize) ;           // Construct Cache according to n(maxNum) and unitSize
+        Cache(int n , int unitSize, BloomFilter * bf) ;           // Construct Cache according to n(maxNum) and unitSize
         void loadCache(FILE* toLoad) ;          // Load a File in the Cache
         bool isfull() ;                         // Judge if a Cache is full 
 

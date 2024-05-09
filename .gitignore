@@ -1,5 +1,9 @@
 .DS_Store
 *.o
-./skipListTest
-./correctness
-./persistence
+skipListTest
+correctness
+persistence
+TEST1
+data
+testRead
+log

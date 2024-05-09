@@ -1,4 +1,5 @@
 #pragma once
+#include <stdint.h>
 constexpr char * DELETE_SIGN = "~DELETED~" ; 
 constexpr int keySize = 20; 					// unit : byte . It save per key 's size in the sstable
 constexpr int bloomSize = 8192 ; 			// unit : byte . save the bloomFilter's size 
@@ -9,7 +10,15 @@ constexpr char MAGIC = 0xff ;
 constexpr int BUFFER_SIZE = 16384 ; 
 constexpr int CACHE_SIZE = 20 ; 
 constexpr int VLOG_HEAD = 15 ; 
+constexpr int VLEN_LOC = 16 ; 
 #define SIZE(n) (keySize * (n) + bloomSize + headSize)
 #define STR_EQUAL(x,y) (strcmp((x),(y))==0)
 // input the index of keyi(start from 0) and the offset of the head; return the true INDEX in the array(from start point)
 #define KEY_INDEX(n,offset) (n)*keySize + (offset)
+
+// diskTable will use
+constexpr int MAX_LEVEL = 30 ; 
+#define GETMIN(sstable) (((int64_t*)(sstable))[2])
+#define GETMAX(sstable) (((int64_t*)(sstable))[3])
+// the cache will use 
+#define GET_VLEN(startKey) (*(int*)((char*)startKey + VLEN_LOC))

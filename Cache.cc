@@ -1,5 +1,5 @@
 #include "Cache.h"
-Cache::Cache(int n , int unitSize):n(n) , unitSize(unitSize)
+Cache::Cache(int n , int unitSize , BloomFilter * bf):n(n) , unitSize(unitSize) , bf(bf)
 {
     memory = (char **)malloc(sizeof(char**)*n) ; 
     LRU_TIME = (int*)malloc(sizeof(int)*n) ; 
@@ -89,7 +89,7 @@ int Cache::getIndex(uint64_t key , int * indexList)
 
     for(int mid = 0 ; mid < loaded ; mid++)
     {
-        if(getMax(mid)>= key && getMin(mid) <= key )
+        if(getMax(mid)>= key && getMin(mid) <= key && bf->isInclude(memory[mid] + headSize , key))
         {
             indexList[size] = mid ; 
             size ++ ;
@@ -134,7 +134,7 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
         if(judger->isInclude(cash+headSize,key))
         {
             
-            offset = searchIndex(key,pos) ; 
+            offset = searchIndex(key,pos) ;             // find the location for the key 
 
             if(offset == -1)
             {
@@ -174,14 +174,25 @@ int Cache::searchIndex(uint64_t key , int index)
                 printf("DEBUG:: Cache::SearchIndex:midKey = %lu mid = %d retVal = %d\n"
                 ,midKey , mid , KEY_INDEX(mid,offset)) ; 
                             #endif
-        if(tail == key)// our head is mid + 1 and round below ; it will make the tail cant find 
+        if(((uint64_t*)(cash+KEY_INDEX(tail,offset)))[0] == key)// our head is mid + 1 and round below ; it will make the tail cant find 
         {
-            return KEY_INDEX(tail,offset) ; 
+            int index = KEY_INDEX(tail,offset) ; 
+            int vlen = GET_VLEN( cash + index ) ; 
+            if(vlen == 0)
+            {
+                return -1 ; 
+            }
+            return index ; 
         }
         if(midKey == key)
         {
-
-            return KEY_INDEX(mid,offset) ; 
+            int index = KEY_INDEX(mid,offset) ; 
+            int vlen = GET_VLEN( cash + index ) ; 
+            if(vlen == 0)
+            {
+                return -1 ; 
+            }
+            return index ; 
 
         }
         if (midKey < key)

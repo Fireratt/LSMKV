@@ -1,43 +1,13 @@
 #include "kvstore.h"
-KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(dir, vlog) , vlog(vlog),cached(0)
+KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(dir, vlog) ,cached(0)
 {
 	// initialize memTable
-	sstableDir = dir.c_str() +std::string( "/level-0")  ; 
 	memtable = new skiplist::skiplist_type(0.5) ; 
-	cache = new Cache(CACHE_SIZE,MAX_SIZE);
 	bloomFilter = new BloomFilter(bloomSize,4);
-
-	if(utils::dirExists(dir))
-	{
-		// read the directory and restart system
-		if(!utils::dirExists(sstableDir))
-		{
-			utils::mkdir(sstableDir) ; 
-		}
-		tail = 0 ; 
-		std::vector<std::string> ret ; 
-		utils::scanDir(sstableDir,ret) ; 
-		// traverse the whole directory's name
-		auto end = ret.end() ; 
-		int vlogChecked = 0 ; 
-		for(auto i = ret.begin() ; i != end ; i++)
-		{
-			if(*i!=vlog)
-			{
-				
-				cached++ ; 
-			}
-		}
-					        #ifdef DEBUG
+	diskManager = new DiskTableManager(	dir, vlog , bloomFilter) ; 
+										#ifdef DEBUG
             printf("DEBUG::Cursor Moving!\n")  ; 
         #endif 
-		initVlog() ; 
-		initCache(sstableDir,ret) ;
-
-
-		return ; 
-	}
-	utils::mkdir(dir) ;
 }
 
 KVStore::~KVStore()
@@ -54,22 +24,25 @@ void KVStore::put(uint64_t key, const std::string &s)
 
 	if(SIZE(memtable->size()+1)>MAX_SIZE)
 	{
-		FILE* ssFile = saveMem() ; 
+
+		saveMem() ; 
 		#ifdef DEBUG
-			// printf("LOG: CALL RESET\n") ; 
-			// printf("LOG: Current SIZE?:%d n?:%d\n",SIZE(memtable->size()+1),memtable->size()) ; 
+			printf("LOG: CALL RESET\n") ; 
+			printf("LOG: Current SIZE?:%d n?:%d\n",SIZE(memtable->size()+1),memtable->size()) ; 
 		#endif
-		if(ssFile)
-		{
-			cache->loadCache(ssFile) ; 
-		}
+		// if(ssFile)
+		// {
+		// 	cache->loadCache(ssFile) ; 
+		// }
 		memtable->reset() ; 						// remove memtable 
 		bloomFilter->reset() ; 						// remove BF
 		// cache the new sstable. 
 		
 	}
+
 	memtable->put(key,s) ; 
 	bloomFilter->insert(key) ; 
+
 }
 /**
  * Returns the (string) value of the given key.
@@ -94,38 +67,11 @@ std::string KVStore::get(uint64_t key)
 	}
 	if(result == DELETE_SIGN)
 		return "" ; 
-	if(result == "")				// dont in the memory ; find cache
+	if(result == "")				// dont in the memory ; ask diskManager
 	{
-		int offset ;
-
-		int index = cache->access(key,bloomFilter,offset) ; 
-		if(index!=-1)
-		{
-			// get the offset in vlog 
-			uint64_t vlogOffset = ((uint64_t *)(cache->access(index)+offset))[1] ; 
-			// get the length of value
-			uint32_t length = ((uint32_t *)(cache->access(index)+offset))[4] ; 
-			#ifdef DEBUG
-                printf("DEBUG:: KvStore::get:vlogOffset = %lu length = %u\n"
-                ,vlogOffset , length) ; 
-            #endif
-			char * buffer = (char *)malloc(BUFFER_SIZE) ; 
-			// read from the VLOG
-			rewind(vlogFile) ; 
-			fseek(vlogFile, VLOG_HEAD + vlogOffset , SEEK_SET) ; 
-			fread(buffer,length,1,vlogFile) ; 
-			// give an end
-			buffer[length] = 0 ;
-			result.append(std::string(buffer)) ; 
-			// find in cache , return 
-			return result ; 
-		}
+		result = diskManager->get(key) ;
 	}
-	// cant find in cache
-	if(result == "")
-	{
-		
-	}
+	// cant find in disk will return "" , else return the result 
 	return result ; 
 }	
 /**
@@ -135,7 +81,8 @@ std::string KVStore::get(uint64_t key)
 bool KVStore::del(uint64_t key)
 {
 	skiplist::skiplist_node * target = memtable->arrive(key) ; 
-	if(target->key!=key || target->val == DELETE_SIGN)
+	if((target->key!=key || target->val == DELETE_SIGN)		// not in the memtable
+	&& diskManager->get(key) == "")														// not in the storage
 	{
 		return 0 ; 
 	}
@@ -150,16 +97,8 @@ bool KVStore::del(uint64_t key)
 void KVStore::reset()
 {
 	memtable->reset() ; 
-	// delete all sstable 
-	std::vector<std::string> ret ; 
-	utils::scanDir(sstableDir,ret) ; 
-	auto end = ret.end() ; 
-	for (auto i = ret.begin() ; i!=end ; i++)
-	{
-		utils::rmfile(sstableDir + "/"+*i) ; 
-	}
-	utils::rmdir(sstableDir) ;
-	utils::rmfile(vlog) ; 
+	diskManager->reset() ; 
+	bloomFilter->reset() ; 
 }
 
 /**
@@ -191,34 +130,28 @@ void KVStore::gc(uint64_t chunk_size)
 {
 }
 
-FILE*  KVStore::saveMem() const 
+void KVStore::saveMem() const 
 {
 	if(memtable->isEmpty())
 	{
-		return 0; 
-	}
-	std::string name = sstableDir ; 
-	if(!utils::dirExists(name))
-	{
-		// dont exist so create
-		utils::mkdir(name) ; 
-
+		return ;
 	}
 	char * sstable = (char*)(malloc(MAX_SIZE)) ; 	// it will be used as the int32* / int64* as well
 
 	splayArray * vlog = new splayArray ; 
 	char * buffer = (char *)malloc(BUFFER_SIZE) ; 
-	sprintf(buffer,"%lu-%lu.sst",memtable->min()->key,memtable->max()->key) ; 
-	FILE * F_sstable = fopen((name + "/" + buffer).c_str(),"w+") ; 
+	// sprintf(buffer,"%lu-%lu.sst",memtable->min()->key,memtable->max()->key) ; 
+	// FILE * F_sstable = fopen((name + "/" + buffer).c_str(),"w+") ; 
+	
 	writeTables(sstable , vlog) ; 
 
-	outputTables(sstable,vlog , F_sstable , vlogFile) ; 
+	diskManager->write(sstable,vlog , memtable->size()) ; 
+
 // end
 	
 	free(sstable) ; 
 	free(buffer) ; 
 	delete vlog ; 
-	return F_sstable ; 
 }
 
 
@@ -245,25 +178,32 @@ void KVStore::writeTables(char * sstable , splayArray * vlog) const
 	{
 		uint64_t key = firstEle->key ; 
 		const std::string & val = firstEle->val ; 
-		const uint32_t valLen = (uint32_t)(val.length()) ; 
+		uint32_t valLen = (uint32_t)(val.length()) ; 
+		if(val == DELETE_SIGN)								// read the DELETESIGN , means the unit have been deleted , valLen should be 0 , Dont need to write vlog
+		{
+			valLen = 0 ; 
+		}
 		// calculate the biase in vlog
-		uint64_t biase = vlog->size() ; 
-		vlog->push(MAGIC) ; 
+		uint64_t biase = vlog->size() + diskManager->getVlogHead(); 
 		// calculate CRC ; 
 		buffer.push(key) ; 
 		buffer.push(valLen) ; 
 		buffer.append(val) ; 
 		buffer.reset() ; 
 		uint16_t crcCode = utils::crc16(buffer.access() , buffer.size()) ; 
-		// insert the codes in vlog 
-		vlog->push(crcCode) ; 
-		vlog->push(key) ; 
-		vlog->push(valLen) ; 
-	// #ifdef DEBUG
-	// 	printf("PUSH END \n") ; 
-	// 	printf("DEBUG::vlog::%s vlog.size:%d\n",vlog->access(),vlog->size()) ; 
-	// #endif
-		vlog->append(val) ; 
+		// insert the codes in vlog if not null 
+		if(valLen != 0)
+		{
+			vlog->push(MAGIC) ; 
+			vlog->push(crcCode) ; 
+			vlog->push(key) ; 
+			vlog->push(valLen) ; 
+		// #ifdef DEBUG
+		// 	printf("PUSH END \n") ; 
+		// 	printf("DEBUG::vlog::%s vlog.size:%d\n",vlog->access(),vlog->size()) ; 
+		// #endif
+			vlog->append(val) ; 
+		}
 		firstEle = firstEle->later ; 
 		writeSS(sstable, sstable_index , key , biase , valLen) ; 
 		sstable_index ++ ; 
@@ -284,53 +224,53 @@ void KVStore::writeSS(char * sstable , int index , uint64_t key ,  uint64_t bias
 
 }
 
-void KVStore::outputTables(char * sstable , splayArray * vlog , FILE * F_sstable , FILE * F_vlog) const
-{
-	int sstableByte = SIZE(memtable->size()) ; 
-	fwrite(sstable,sstableByte , 1 , F_sstable) ; 
-	// #ifdef DEBUG
-	// 	printf("DEBUG::vlog::%s vlog.size:%d\n",vlog->access(),vlog->size()) ; 
-	// #endif
-	fwrite(vlog->access(),vlog->size(),1,F_vlog) ; 
-}
+// void KVStore::outputTables(char * sstable , splayArray * vlog , FILE * F_sstable , FILE * F_vlog) const
+// {
+// 	int sstableByte = SIZE(memtable->size()) ; 
+// 	fwrite(sstable,sstableByte , 1 , F_sstable) ; 
+// 	// #ifdef DEBUG
+// 	// 	printf("DEBUG::vlog::%s vlog.size:%d\n",vlog->access(),vlog->size()) ; 
+// 	// #endif
+// 	fwrite(vlog->access(),vlog->size(),1,F_vlog) ; 
+// }
 
-void KVStore::initVlog()
-{
-	vlogFile = fopen(vlog.c_str(),"a+") ; 
-	fseek(vlogFile,0,SEEK_END) ; 
-	head = ftell(vlogFile) ; 					// push the FILE to end and get the size 
-	rewind(vlogFile) ; 
+// void KVStore::initVlog()
+// {
+// 	vlogFile = fopen(vlog.c_str(),"a+") ; 
+// 	fseek(vlogFile,0,SEEK_END) ; 
+// 	head = ftell(vlogFile) ; 					// push the FILE to end and get the size 
+// 	rewind(vlogFile) ; 
 	
-	char * buffer  = (char*)(malloc(BUFFER_SIZE)) ; 
-	char magic = fgetc(vlogFile) ; 
-	while(magic!=EOF)
-	{
-		if(magic==0xff)
-		{
-			tail = ftell(vlogFile) ; 
-			break ; 
-		}
-		magic = fgetc(vlogFile) ; 
-	}
-	free(buffer) ; 
-	return ; 
-}
+// 	char * buffer  = (char*)(malloc(BUFFER_SIZE)) ; 
+// 	char magic = fgetc(vlogFile) ; 
+// 	while(magic!=EOF)
+// 	{
+// 		if(magic==0xff)
+// 		{
+// 			tail = ftell(vlogFile) ; 
+// 			break ; 
+// 		}
+// 		magic = fgetc(vlogFile) ; 
+// 	}
+// 	free(buffer) ; 
+// 	return ; 
+// }
 
-void KVStore::initCache(const std::string & dir,const std::vector<std::string>& sstables)
-{
-	auto i = sstables.begin() ; 
-	auto last = sstables.end() ;
-	for(; i != last ; i++)
-	{
-		if(cache->isfull())
-			return ; 
-		// #ifdef DEBUG
-		// printf("FILEName:%s\n",("./" + dir + "/" +  (*i)).c_str()) ; 
-		// fflush(stdout) ; 
-		// #endif
+// void KVStore::initCache(const std::string & dir,const std::vector<std::string>& sstables)
+// {
+// 	auto i = sstables.begin() ; 
+// 	auto last = sstables.end() ;
+// 	for(; i != last ; i++)
+// 	{
+// 		if(cache->isfull())
+// 			return ; 
+// 		// #ifdef DEBUG
+// 		// printf("FILEName:%s\n",("./" + dir + "/" +  (*i)).c_str()) ; 
+// 		// fflush(stdout) ; 
+// 		// #endif
 
-		FILE * ss = fopen(("./" + dir+ "/"  + (*i)).c_str(),"r+") ; 
-		cache->loadCache(ss);
-		fclose(ss) ; 
-	}
-}
+// 		FILE * ss = fopen(("./" + dir+ "/"  + (*i)).c_str(),"r+") ; 
+// 		cache->loadCache(ss);
+// 		fclose(ss) ; 
+// 	}
+// }
