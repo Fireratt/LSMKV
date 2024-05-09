@@ -1,14 +1,8 @@
 #include "Cache.h"
-Cache::Cache(int n , int unitSize , BloomFilter * bf):n(n) , unitSize(unitSize) , bf(bf)
+Cache::Cache(int unitSize , BloomFilter * bf):unitSize(unitSize) , bf(bf)
 {
-    memory = (char **)malloc(sizeof(char**)*n) ; 
-    LRU_TIME = (int*)malloc(sizeof(int)*n) ; 
-    for(int i = 0 ; i < n ; i++)
-    {
-        memory[i] = 0 ; 
-        // Not initialize ; time marked to be max 
-        LRU_TIME[i] = INT32_MAX  ; 
-    }
+    memory.reserve(100) ; 
+    loaded = 0 ;
 }
 
 void Cache::loadCache(FILE* toLoad)
@@ -27,55 +21,19 @@ void Cache::loadCache(FILE* toLoad)
     }
 
     rewind(toLoad) ; 
-    int loc = getReplaceIndex() ; 
-        // #ifdef DEBUG
-		// 	printf("DEBUG:: Cache index:%d\n",loc) ; 
-		// #endif
-    if(!memory[loc])
-    {
-        memory[loc] = (char *)malloc(MAX_SIZE) ; 
-    }
-    fread(memory[loc],len,1,toLoad) ; 
-
-    // reset the access times
-    LRU_TIME[loc] = 0 ; 
-    // update loaded
-    if(loaded < n)
-        loaded ++ ; 
-    increaseTime() ; 
+    char * newCache = (char *)malloc(MAX_SIZE) ; 
+    fread(newCache,len,1,toLoad) ; 
+    memory.push_back(newCache) ; 
+    loaded ++ ; 
     return ; 
 }
 
-void Cache::increaseTime()
-{
-    for(int i = 0 ; i < loaded ; i++)
-    {
-        if(LRU_TIME[i] != INT32_MAX)
-            LRU_TIME[i]++ ; 
-    }
-}
-int Cache::getReplaceIndex()
-{
-    int max = -1 ; 
-    int index = 0 ; 
-    for(int i = 0 ; i < n ; i++)
-    {
-        int tem = LRU_TIME[i] ; 
-        if(tem>max)
-        {
-            max = tem ; 
-            index = i ; 
-        }
-    }
-    return index ; 
-}
-
-uint64_t Cache::getMin(int index)
+uint64_t Cache::getMin(int index) const 
 {
     return ((uint64_t*)(memory[index]))[2] ; 
 }
 
-uint64_t Cache::getMax(int index)
+uint64_t Cache::getMax(int index) const 
 {
     return ((uint64_t*)(memory[index]))[3] ; 
 }
@@ -89,28 +47,24 @@ int Cache::getIndex(uint64_t key , int * indexList)
 
     for(int mid = 0 ; mid < loaded ; mid++)
     {
+        #ifdef DEBUG
+            printf("Get Memory Index : key :%lu , max :%lu , min:%lu , current:%d" ,
+             key , getMax(mid) ,getMin(mid) , mid ) ; 
+        #endif
         if(getMax(mid)>= key && getMin(mid) <= key && bf->isInclude(memory[mid] + headSize , key))
         {
             indexList[size] = mid ; 
             size ++ ;
         }
     }
-    if(size < n)
-    {
-        indexList[size] = -1 ; 
-    }
+
+        indexList[size] = -1 ;              // maximum size is loaded ; so need to initialzie indexList to loaded + 1
     return size > 0 ;  
 }
-
-bool Cache::isfull()
-{
-    return n == loaded ; 
-}
-
 int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
 {
     // record the posible index
-    int * posList = (int *)malloc(sizeof(int)*n) ; 
+    int * posList = (int *)malloc(sizeof(int)*(loaded+1)) ; 
 
     if(!getIndex(key,posList))
     {
@@ -121,7 +75,7 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
     }
     // update times
 
-    for(int i = 0 ; i < n ; i++)
+    for(int i = 0 ; i < loaded ; i++)
     {
         // read the end tag
         if(posList[i]==-1)
@@ -142,11 +96,6 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
             }
             else
             {
-                LRU_TIME[pos] = 0 ; 
-                increaseTime() ; 
-                // #ifdef DEBUG
-                //     printf("DEBUG:: Cache::Access:pos= %d offset = %d \n" , pos , offset) ; 
-                // #endif
                 return pos ; 
             }
         }

@@ -5,7 +5,7 @@ DiskTableManager::DiskTableManager(const std::string &dir, const std::string &vl
 {
     this->bf = bf ; 
 	this->dir = dir ; 
-	cache = new Cache(100,MAX_SIZE , bf) ; 
+	cache = new Cache(MAX_SIZE , bf) ; 
     if(utils::dirExists(dir))
 	{
 		// // read the directory and restart system
@@ -130,8 +130,6 @@ void DiskTableManager::initCache(const std::string & dir , const std::vector<std
 	auto last = sstables.end() ;
 	for(; i != last ; i++)
 	{
-		if(cache->isfull())
-			return ; 
 		// #ifdef DEBUG
 		// printf("FILEName:%s\n",("./" + dir + "/" +  (*i)).c_str()) ; 
 		// fflush(stdout) ; 
