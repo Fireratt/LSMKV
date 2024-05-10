@@ -307,7 +307,15 @@ bool skiplist_type::isEmpty()
 {
     return n==0 ; 
 }
+skiplist_node * skiplist_type::getHead() const
+{
+    return head ; 
+}
 
+skiplist_node * skiplist_type::getTopHead() const
+{
+    return topHead ; 
+}
 
 
 } // namespace skiplist

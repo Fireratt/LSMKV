@@ -1,8 +1,10 @@
 #pragma once
 #include <stdlib.h>
 #include <stdio.h>
+#include <cassert>
 #include <vector>
 #include <stdint.h>
+#include <algorithm>
 #include "Constants.h"
 #include "BloomFilter.h"
 // #define DEBUG
@@ -29,4 +31,16 @@ class Cache
         int access(uint64_t key,const BloomFilter *judger , int & offset) ; 
         // get the memory in the index 
         char * access(int index) ; 
+        // get the bottom(newest) cache line 
+        char * bottom() const ; 
+        // get the loaded size of the cache
+        int size() const  ; 
+        // get the timeStamp of a index
+        uint64_t getTimeStamp(int index) const ;
+        // compare the timestamp to sort 
+        bool sort_timeStamp(int index1 , int index2); 
+        void shellSort(int arr[], int n) ; 
+        // delete all the memory 
+        void reset() ; 
 };
+

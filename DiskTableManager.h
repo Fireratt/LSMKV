@@ -34,9 +34,11 @@ class DiskTableManager
         int head ; 
         // The Number of Cached sstable
         int cached ;
-
         // the vlog's file descriptor
         FILE * vlogFile ;
+
+        // the current , biggest TimeStamp ; 
+        int timeStamp ; 
     public :
         DiskTableManager(const std::string &dir, const std::string &vlog , BloomFilter * bf) ; 
         ~DiskTableManager() ; 
@@ -57,6 +59,8 @@ class DiskTableManager
         // get the tail and head for the vlog 
         int getVlogTail() ; 
         int getVlogHead() ; 
+        // get the next timeStamp
+        int getNextTimeStamp() ; 
 
 };
 

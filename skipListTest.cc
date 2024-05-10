@@ -5,10 +5,10 @@
 #define empty(x) (strcmp(x,"")==0)
 int main()
 {
-    KVStore testMemTable("TEST1","TEST1_VLOG") ; 
+    KVStore testMemTable("TEST1","./TEST1/TEST1_VLOG") ; 
     testMemTable.reset() ; 
     char * buf = (char *)malloc(BUFFER_SIZE) ; 
-    int max = 1024 ; 
+    int max = 512; 
     for(int i = 0 ; i < max ; i++)
     {
         // printf("inserting::%d\n" , i) ; 
@@ -17,12 +17,12 @@ int main()
         testMemTable.put(i,buf) ; 
     }
 
-    
 		// Test deletions
 		for (int i = 0; i < max; i += 2)
 		{
 			// EXPECT(true, store.del(i));
             printf("Delete even Number(all should true) : %d\n" , testMemTable.del(i)) ; 
+
 		}
 
 		for (int i = 0; i < max; ++i)

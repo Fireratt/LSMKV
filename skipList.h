@@ -67,6 +67,11 @@ class skiplist_type
 		void reset() ; 
 		// check if skipList is empty 
 		bool isEmpty() ; 
+		// return the head 
+		skiplist_node * getHead() const ; 
+		// return the topHead
+		skiplist_node * getTopHead() const;
+		
 };	
 
 } // namespace skiplist

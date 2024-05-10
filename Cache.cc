@@ -48,17 +48,27 @@ int Cache::getIndex(uint64_t key , int * indexList)
     for(int mid = 0 ; mid < loaded ; mid++)
     {
         #ifdef DEBUG
-            printf("Get Memory Index : key :%lu , max :%lu , min:%lu , current:%d" ,
-             key , getMax(mid) ,getMin(mid) , mid ) ; 
+            // printf("Get Memory Index : key :%lu , max :%lu , min:%lu , current:%d\n" ,
+            //  key , getMax(mid) ,getMin(mid) , mid ) ; 
         #endif
-        if(getMax(mid)>= key && getMin(mid) <= key && bf->isInclude(memory[mid] + headSize , key))
+        if(getMax(mid)>= key && getMin(mid) <= key )
+        // && bf->isInclude(memory[mid] + headSize , key))
         {
             indexList[size] = mid ; 
             size ++ ;
         }
     }
-
-        indexList[size] = -1 ;              // maximum size is loaded ; so need to initialzie indexList to loaded + 1
+    // sort the indexList , make it ordered by the timestamp , bigger timestamp should at front 
+    shellSort(indexList,size) ; 
+    #ifdef DEBUG
+        printf("Cache : GetIndex : Start Print indexList Result:") ; 
+        for(int i = 0 ; i < size ; i++)
+        {
+            printf("timestamp:%lu , index :%d" , getTimeStamp(indexList[i]) , indexList[i]); 
+        }
+        printf("\n") ; 
+    #endif
+    indexList[size] = -1 ;              // maximum size is loaded ; so need to initialzie indexList to loaded + 1
     return size > 0 ;  
 }
 int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
@@ -87,13 +97,16 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
         // may in it 
         if(judger->isInclude(cash+headSize,key))
         {
-            
             offset = searchIndex(key,pos) ;             // find the location for the key 
-
             if(offset == -1)
             {
                 continue ; 
             }
+            int vlen = GET_VLEN( cash + offset) ;       // read the location's vlen ; if it is a 0 ; means deleted
+            if(vlen == 0)
+            {
+                return -1 ; 
+            }                                           
             else
             {
                 return pos ; 
@@ -126,21 +139,12 @@ int Cache::searchIndex(uint64_t key , int index)
         if(((uint64_t*)(cash+KEY_INDEX(tail,offset)))[0] == key)// our head is mid + 1 and round below ; it will make the tail cant find 
         {
             int index = KEY_INDEX(tail,offset) ; 
-            int vlen = GET_VLEN( cash + index ) ; 
-            if(vlen == 0)
-            {
-                return -1 ; 
-            }
             return index ; 
         }
         if(midKey == key)
         {
             int index = KEY_INDEX(mid,offset) ; 
-            int vlen = GET_VLEN( cash + index ) ; 
-            if(vlen == 0)
-            {
-                return -1 ; 
-            }
+
             return index ; 
 
         }
@@ -159,4 +163,47 @@ int Cache::searchIndex(uint64_t key , int index)
 char * Cache::access(int index)
 {
     return memory[index] ; 
+}
+
+char * Cache::bottom() const 
+{
+    return memory[loaded-1] ; 
+}
+
+int Cache::size() const 
+{
+    return loaded ; 
+}
+
+uint64_t Cache::getTimeStamp(int index) const
+{
+    return *(uint64_t *)memory[index] ; 
+}
+
+bool Cache::sort_timeStamp(int index1 , int index2)
+{
+    return getTimeStamp(index1) > getTimeStamp(index2) ; 
+}
+
+void Cache::shellSort(int arr[], int n) {
+    int i, j, temp, gap;
+ 
+    // 初始间隔设定为数组长度的一半
+    for (gap = n / 2; gap > 0; gap /= 2) {
+        // 对每个间隔进行插入排序
+        for (i = gap; i < n; i++) {
+            temp = arr[i];
+            // 对当前间隔内的元素进行插入排序
+            for (j = i; j >= gap && sort_timeStamp( temp , arr[j - gap] ); j -= gap) {
+                arr[j] = arr[j - gap];
+            }
+            arr[j] = temp;
+        }
+    }
+}
+
+void Cache::reset() 
+{
+    loaded = 0 ; 
+    memory.clear() ; 
 }

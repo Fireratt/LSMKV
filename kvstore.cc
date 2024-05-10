@@ -81,12 +81,23 @@ std::string KVStore::get(uint64_t key)
 bool KVStore::del(uint64_t key)
 {
 	skiplist::skiplist_node * target = memtable->arrive(key) ; 
-	if((target->key!=key || target->val == DELETE_SIGN)		// not in the memtable
-	&& diskManager->get(key) == "")														// not in the storage
+	#ifdef DEBUG
+		printf("Delete Find in Memory:%d:%s , in disk:%s\n" ,target->key, target->val.c_str(),diskManager->get(key).c_str()) ; 
+	#endif
+	// find a DELETE_SIGN in memory table , it definitely be deleted . 
+	// only when cant find the key , we need to find the disk
+	// it should handle memtable's head is also 0's situation ; 
+	if(((memtable->getHead()!=target && memtable->getTopHead()!=target &&(target->key == key)) &&target->val == DELETE_SIGN) || (target->key!=key 		// not in the memtable
+	&& diskManager->get(key) == ""))																// not in the storage
 	{
 		return 0 ; 
 	}
-	target->updateValue(DELETE_SIGN) ; 
+	if((memtable->getHead()!=target && memtable->getTopHead()!=target &&(target->key == key)))
+		target->updateValue(DELETE_SIGN) ; 
+	else
+	{
+		this->put(key,DELETE_SIGN) ; 
+	}
 	return 1 ; 
 }
 
@@ -166,7 +177,7 @@ void KVStore::writeTables(char * sstable , splayArray * vlog) const
 	skiplist::skiplist_node * tail = memtable->max()->later ; 	// use as a end signal
 	// head 
 
-	sstable_64[0] =  1 ; 
+	sstable_64[0] =  diskManager->getNextTimeStamp() ; 
 	sstable_64[1] = n ; 
 	sstable_64[2] = firstEle->key ; 
 	sstable_64[3] = tail->prev->key ; 
@@ -223,6 +234,10 @@ void KVStore::writeSS(char * sstable , int index , uint64_t key ,  uint64_t bias
 	sstable_32[4] = len ; 
 
 }
+	void KVStore::PRINT_STATUS() 
+	{
+		memtable->PRINT_STATUS() ; 
+	}
 
 // void KVStore::outputTables(char * sstable , splayArray * vlog , FILE * F_sstable , FILE * F_vlog) const
 // {

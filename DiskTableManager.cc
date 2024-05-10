@@ -5,20 +5,15 @@ DiskTableManager::DiskTableManager(const std::string &dir, const std::string &vl
 {
     this->bf = bf ; 
 	this->dir = dir ; 
+	timeStamp = 0 ; 
 	cache = new Cache(MAX_SIZE , bf) ; 
+	
     if(utils::dirExists(dir))
 	{
-		// // read the directory and restart system
-		// if(!utils::dirExists(sstableDir))
-		// {
-		// 	utils::mkdir(sstableDir) ; 
-		// }
 		initVlog() ; 
 		scanDisk() ; 				// scan the directory 
-
 		return ; 
 	}
-
 	utils::mkdir(dir) ;
 	char * buf = (char*)malloc(BUFFER_SIZE) ; 
 	sprintf(buf,"%s",vlog.c_str()) ; 			// prepare the vlog address
@@ -104,7 +99,9 @@ void DiskTableManager::write(char * sstable , splayArray * vlog , int mmSize)
 	std::string directory(buf) ; 
 	int64_t min = GETMIN(sstable) ; 
 	int64_t max = GETMAX(sstable) ; 
-	sprintf(buf,"%s/%lu-%lu.sst",directory.c_str(),min,max) ; 								// prepare the sstable directory ; 
+	sprintf(buf,"%d_%lu-%lu.sst",getNextTimeStamp(),min,max) ; 								// prepare the sstable name ; 
+	std::string sstName(buf) ; 
+	sprintf(buf,"%s/%s",directory.c_str(),sstName.c_str()) ; 								// prepare the sstable directory ; 
 	FILE* F_sstable	= fopen(buf,"wr+");									// find the true sstable's location 
 	// int sstableByte = SIZE(memtable->size()) ; 
 	if(!F_sstable)
@@ -120,7 +117,10 @@ void DiskTableManager::write(char * sstable , splayArray * vlog , int mmSize)
 	fwrite(vlog->access(),vlog->size(),1,vlogFile) ; 
 	head += vlog->size() ; 								// update the new location of vlog head after insert new vlogs
 	rewind(F_sstable) ; 								// rewind the FILE and load it to cache
-	cache->loadCache(F_sstable) ; 
+	cache->loadCache(F_sstable) ; 						
+
+	timeStamp = timeStamp + 1 ; 						// update the timeStamp 
+	insertSS(0,sstName) ; 								// update the manager 
 	fclose(F_sstable) ; 
 }
 
@@ -146,7 +146,7 @@ void DiskTableManager::scan(std::list<std::pair<uint64_t, std::string>> &list)
 }
 DiskTableManager::~DiskTableManager() 
 {
-
+	fclose(vlogFile) ; 
 }
 
 void DiskTableManager::reset()
@@ -166,7 +166,16 @@ void DiskTableManager::reset()
 		}
 		utils::rmdir(dirName) ;
 	}
+	// must close the vlog first , then we can remove it , and we need to reopen it
+	fclose(vlogFile) ; 
 	utils::rmfile(vlog) ; 
+	sprintf(buf,"%s",vlog.c_str()) ; 			// prepare the vlog address
+	vlogFile = fopen(buf,"a+") ; 
+	timeStamp = 0 ; 				// reset the global timeStamp
+	head = 0  ;
+	tail = 0 ; 						// reset the vlog head and tail 
+
+	cache->reset() ; 				// reset the cache
 	free(buf) ; 
 }
 
@@ -198,6 +207,12 @@ void DiskTableManager::scanDisk()
 				return ; 
 			}
 			cache->loadCache(sstable) ; 
+			int currentTimeStamp = cache->getTimeStamp(cache->size()-1) ; 
+			if(currentTimeStamp > timeStamp)					// update the global timeStamp
+			{
+				
+				timeStamp = currentTimeStamp ; 
+			}
 		}
 	}
 	free(buf) ; 
@@ -216,4 +231,7 @@ int DiskTableManager::getVlogHead()
 {
 	return head ; 
 }
-
+int DiskTableManager::getNextTimeStamp()
+{
+    return timeStamp + 1 ; 
+}

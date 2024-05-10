@@ -61,4 +61,7 @@ public:
 
 //	initailize the cache until there is no sstable/cache full 
 	void initCache(const std::string & dir , const std::vector<std::string>& sstables) ;
+
+	// print the status of memTable
+	void PRINT_STATUS() ; 
 };
