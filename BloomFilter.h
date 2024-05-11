@@ -30,6 +30,8 @@ class BloomFilter
         void reset () ; 
         // get the array's pointer
         char* access() ; 
+        ~BloomFilter() ; 
+
 } ; 
 
 #endif

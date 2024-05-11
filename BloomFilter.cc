@@ -10,6 +10,10 @@ hashNumber(hashSize)
         hashArray[i] = 0 ; 
     }
 }
+BloomFilter::~BloomFilter()
+{
+    free(hashArray) ; 
+}
 void BloomFilter::reset()
 {
     // set value to zero

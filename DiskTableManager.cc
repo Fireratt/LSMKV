@@ -80,7 +80,9 @@ std::string DiskTableManager::get(uint64_t key)
 			fread(buffer,length,1,vlogFile) ; 
 			// give an end
 			buffer[length] = 0 ;
-			result.append(std::string(buffer)) ; 
+			result = result.assign(buffer) ; 
+
+			free(buffer) ; 
 			// find in cache , return 
 			return result ; 
 		}
@@ -101,12 +103,15 @@ void DiskTableManager::write(char * sstable , splayArray * vlog , int mmSize)
 	int64_t max = GETMAX(sstable) ; 
 	sprintf(buf,"%d_%lu-%lu.sst",getNextTimeStamp(),min,max) ; 								// prepare the sstable name ; 
 	std::string sstName(buf) ; 
+
 	sprintf(buf,"%s/%s",directory.c_str(),sstName.c_str()) ; 								// prepare the sstable directory ; 
+
 	FILE* F_sstable	= fopen(buf,"wr+");									// find the true sstable's location 
 	// int sstableByte = SIZE(memtable->size()) ; 
 	if(!F_sstable)
 	{
 		printf("Cant Open:%s\n",buf) ; 
+		free(buf) ; 
 		return ; 
 	}
 	int sstableByte = SIZE(mmSize) ; 
@@ -118,9 +123,9 @@ void DiskTableManager::write(char * sstable , splayArray * vlog , int mmSize)
 	head += vlog->size() ; 								// update the new location of vlog head after insert new vlogs
 	rewind(F_sstable) ; 								// rewind the FILE and load it to cache
 	cache->loadCache(F_sstable) ; 						
-
 	timeStamp = timeStamp + 1 ; 						// update the timeStamp 
 	insertSS(0,sstName) ; 								// update the manager 
+	free(buf) ; 
 	fclose(F_sstable) ; 
 }
 
@@ -140,13 +145,49 @@ void DiskTableManager::initCache(const std::string & dir , const std::vector<std
 		fclose(ss) ; 
 	}
 }
-void DiskTableManager::scan(std::list<std::pair<uint64_t, std::string>> &list) 
+void DiskTableManager::scan(uint64_t key1 , uint64_t key2 , 
+std::list<std::pair<uint64_t, std::string>> &list , std::unordered_set<uint64_t>& scaned) 
 {
+	int * lineList = (int*)malloc(sizeof(int)*(cache->size()+1)); 
 
+	cache->scanPossibleLine(key1, key2 , lineList) ;  // get all the cacheLine index that overlap with key1-key2 . linelist ordered , should end with -1
+	
+	for(int i = 0 ; lineList[i] != -1; i++)				// check all the cacheline
+	{
+		int index = lineList[i] ;
+		char * cacheLine = cache->access(index) ; 
+		int offset = cache->arrive(index , key1) ; // get the start location for scan the sstable
+		int hand = offset ; 
+		for(; hand < MAX_SIZE ; hand = NEXT_KEY(hand))
+		{
+			uint64_t key = GET_KEY(cacheLine + hand) ; 	
+
+			if(key > key2)											// bigger than max , definitely not have the key , break ; 
+			{
+				break ; 
+			}
+			
+			if(!scaned.empty()&&scaned.find(key) != scaned.end())					// have the element in the list 
+			{
+				continue ; 
+			}
+			if(key >= key1 && key <= key2)							// in the scan range
+			{
+				std::string ret = getValByCacheLine(cacheLine,hand) ; 				// 
+				#ifdef DEBUG
+					printf("DiskTableManager : Scan : getRet:%s ,key :%lu\n" , ret.c_str() , key) ; 
+				#endif
+				scaned.insert(key) ; 
+				list.push_back(std::pair<uint64_t, std::string>(key,ret)) ; 
+			}
+		}
+	}
+	free(lineList) ; 
 }
 DiskTableManager::~DiskTableManager() 
 {
 	fclose(vlogFile) ; 
+	delete cache ;
 }
 
 void DiskTableManager::reset()
@@ -189,6 +230,7 @@ void DiskTableManager::scanDisk()
 		dirName = dir + dirName ; 
 		if(!utils::dirExists(dirName))		// joint the directory address;
 		{
+			free(buf) ; 
 			return ; 		// Not have the directory ; there will be no levels
 		}
 		std::vector<std::string> sstables ; 
@@ -204,6 +246,7 @@ void DiskTableManager::scanDisk()
 			if(!sstable)
 			{
 				printf("Cant Read:%s" , buf) ; 
+				free(buf) ; 
 				return ; 
 			}
 			cache->loadCache(sstable) ; 
@@ -231,7 +274,35 @@ int DiskTableManager::getVlogHead()
 {
 	return head ; 
 }
+
 int DiskTableManager::getNextTimeStamp()
 {
     return timeStamp + 1 ; 
+}
+
+std::string DiskTableManager::getValByCacheLine(char * cacheLine, int offset)
+{
+	int vlen = GET_VLEN(cacheLine + offset) ; 
+	char * val = (char *)malloc(vlen+1) ; 
+
+	int64_t vOffset = GET_OFFSET(cacheLine + offset) ; 
+
+	rewind(vlogFile) ; 
+	fseek(vlogFile, VLOG_HEAD + vOffset , SEEK_SET) ; 	// move the ptr to the vOffset
+	fread(val,vlen,1,vlogFile) ; 
+	val[vlen] = 0 ; 
+	// #ifdef DEBUG
+	// 	printf("GetValue From CacheLine: %s , vOffset:%d vlen:%d\n" , val , vOffset , vlen) ; 
+	// #endif
+	rewind(vlogFile) ; 
+	std::string backVal = "" ; 
+	backVal.assign(val) ; 
+	free(val) ; 
+	return backVal ; 
+}
+
+std::string DiskTableManager::getValByIndex(int index, int offset)
+{
+	char * cacheLine = cache->access(index) ; 
+	return getValByCacheLine(cacheLine,offset) ; 
 }

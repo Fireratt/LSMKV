@@ -13,6 +13,9 @@ KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(d
 KVStore::~KVStore()
 {
 	saveMem() ; 
+	delete memtable ; 
+	delete bloomFilter ; 
+	delete diskManager ; 
 }
 
 /**
@@ -51,10 +54,6 @@ void KVStore::put(uint64_t key, const std::string &s)
 std::string KVStore::get(uint64_t key)
 {			
 	std::string result ; 
-		#ifdef DEBUG
-			if(key == 407)
-                printf("407 in process!!, result?%s\n:",result.c_str()) ; 
-        #endif
 	if(bloomFilter->isInclude(key))
 	{
 
@@ -119,18 +118,25 @@ void KVStore::reset()
  */
 void KVStore::scan(uint64_t key1, uint64_t key2, std::list<std::pair<uint64_t, std::string>> &list)
 {
+	std::unordered_set<uint64_t> scaned ;
 	skiplist::skiplist_node * hand =  memtable->arrive(key1) ; 
 	uint64_t key = hand->key ; 
-	if(hand->key == key1)								// find key1 . 
+	if(hand != memtable->getHead() && hand!= memtable->getTopHead())	// avoid the head situation
 	{
-		list.push_back(std::pair<uint64_t, std::string>(key,hand->val)) ; 
+		if(hand->key == key1)								// find key1 . 
+		{
+			scaned.insert(key) ; 
+			list.push_back(std::pair<uint64_t, std::string>(key,hand->val)) ; 
+		}
+		hand = hand -> later ; 
+		while(hand && hand->key<=key2)
+		{
+			scaned.insert(hand->key) ; 
+			list.push_back(std::pair<uint64_t, std::string>(hand->key,hand->val)) ; 
+			hand = hand->later ; 
+		}
 	}
-	hand = hand -> later ; 
-	while(hand && hand->key<=key2)
-	{
-		list.push_back(std::pair<uint64_t, std::string>(hand->key,hand->val)) ; 
-		hand = hand->later ; 
-	}
+	diskManager->scan(key1,key2,list , scaned) ; 
 }
 
 /**
@@ -157,7 +163,6 @@ void KVStore::saveMem() const
 	writeTables(sstable , vlog) ; 
 
 	diskManager->write(sstable,vlog , memtable->size()) ; 
-
 // end
 	
 	free(sstable) ; 

@@ -81,6 +81,7 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
         #ifdef DEBUG
             printf("Cant find the key when access!\n")  ; 
         #endif 
+        free(posList) ; 
         return -1 ; 
     }
     // update times
@@ -105,14 +106,17 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
             int vlen = GET_VLEN( cash + offset) ;       // read the location's vlen ; if it is a 0 ; means deleted
             if(vlen == 0)
             {
+                free(posList) ; 
                 return -1 ; 
             }                                           
             else
             {
+                free(posList) ; 
                 return pos ; 
             }
         }
     }
+    free(posList) ; 
     return -1 ;
 }
 
@@ -205,5 +209,61 @@ void Cache::shellSort(int arr[], int n) {
 void Cache::reset() 
 {
     loaded = 0 ; 
+    // free the cacheLine in the list 
+    auto begin = memory.begin() ;
+    auto end = memory.end() ; 
+    for(; begin != end ; begin++)
+    {
+        free(*begin) ; 
+    }
     memory.clear() ; 
+
+}
+
+int Cache::arrive(int index , uint64_t key)
+{
+    char * cacheLine = memory[index] ; 
+    int64_t keyNumber = GET_KEY_NUM(cacheLine) ; //Get the number of key in it
+    int low = 0 ; 
+    int mid = 0 ; 
+    int high = keyNumber - 1 ; 
+    int prevMid = 0;                   // record the previous Mid to find the key near the wanted key
+    while(low <= high)
+    {
+        mid = (low + high)/ 2 ;
+        int midKey =GET_KEY(cacheLine +  KEY_INDEX(mid , FRONT_OFFSET) ) ; 
+        if(key == midKey)
+        {
+            return KEY_INDEX(mid , FRONT_OFFSET) ; 
+        } 
+        else if (key > midKey)
+        {
+            prevMid = mid ; 
+            low = mid + 1 ; 
+        }
+        else
+        {
+            high = mid - 1 ; 
+        }
+    }
+    // return the key near the key . 
+    return KEY_INDEX(prevMid , FRONT_OFFSET);
+}
+
+void Cache::scanPossibleLine(uint64_t key1 , uint64_t key2 , int * lineList)
+{
+    int i = 0 ; 
+    for(int j = 0 ; j < loaded ; j++)
+    {
+        int max = getMax(j) ; 
+        int min = getMin(j) ; 
+        if(isOverlap(min , max , key1 , key2))
+        {
+            lineList[i] = j ; 
+            i++ ; 
+        }
+    }
+    // sort the lineList due to the decrease order 
+    shellSort(lineList , i) ; 
+    lineList[i] = -1 ; 
 }

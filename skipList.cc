@@ -23,7 +23,12 @@ skiplist_type::skiplist_type(double p)
     this->p = p ; 
     init() ; 
 }
-
+skiplist_type::~skiplist_type()
+{
+    reset() ;
+    delete tail ; 
+    delete head ; 
+}
 int skiplist_type::put(key_type key, const value_type &val) 
 {
     skiplist_node* hand = topHead;                           // the pointer to point at the current processing node ; 
@@ -160,8 +165,8 @@ void skiplist_node::insert(key_type key, const value_type &val , double p , skip
         {
             if(!hand->prev)                                         // arrive at the left end and top level 
             {
-                hand->upper = new skiplist_node ; 
-                hand->upper->later = new skiplist_node ; 
+                hand->upper = new skiplist_node ;                   // the head
+                hand->upper->later = new skiplist_node ;            // the tail
                 hand->upper->lower = hand ; 
                 hand->upper->later->prev = hand->upper ; 
                 hand->upper->insert(key,val,p,this->later) ; 
@@ -264,31 +269,50 @@ skiplist_node * skiplist_type::max() const
 
 void skiplist_type::reset() 
 {
-    skiplist_node * bottomHand = head->later ; 
-    while(bottomHand->later)                    // tail have no later node . 
+    // skiplist_node * bottomHand = head->later ; 
+    // while(bottomHand->later)                    // tail have no later node . 
+    // {
+    //     skiplist_node * upHand = bottomHand ; 
+    //     skiplist_node * next = bottomHand->later ; 
+    //     while(upHand)
+    //     {
+    //         skiplist_node* tem = upHand->upper ; 
+    //         delete upHand ; 
+    //         upHand = tem ; 
+    //     }
+    //     bottomHand = next ; 
+    // }
+    // // remove the tail and head's children nodes
+    // skiplist_node * headHand = head->upper ; 
+    // while(headHand)
+    // {
+    //     skiplist_node * tem = headHand->upper ; 
+    //     delete headHand ; 
+    //     headHand = tem ; 
+    // }
+    // skiplist_node * tailHand = tail->upper ; 
+    // while(tailHand)
+    // {
+    //     skiplist_node * tem = tailHand->upper ; 
+    //     delete tailHand ; 
+    //     tailHand = tem ; 
+    // }
+    // delete the list according to the floor order , instead of the unit order
+    skiplist_node* hand = head ; 
+    while(hand)                 // traverse floors
     {
-        skiplist_node * upHand = bottomHand ; 
-        skiplist_node * next = bottomHand->later ; 
-        while(upHand)
+        skiplist_node * floorHand = hand ; 
+        skiplist_node * upper = floorHand->upper ; 
+        while(floorHand)
         {
-            skiplist_node* tem = upHand->upper ; 
-            delete upHand ; 
-            upHand = tem ; 
+            skiplist_node * next = floorHand->later ; 
+            if(floorHand!=head && floorHand!=tail)      // dont delete the bottom's tail and head 
+            {
+                delete floorHand ; 
+            }
+            floorHand = next ; 
         }
-        bottomHand = next ; 
-    }
-    // remove the tail and head's children nodes
-    skiplist_node * headHand = head->upper ; 
-    while(headHand)
-    {
-        delete headHand ; 
-        headHand = headHand->upper ; 
-    }
-    skiplist_node * tailHand = tail->upper ; 
-    while(tailHand)
-    {
-        delete tailHand ; 
-        tailHand = tailHand->upper ; 
+        hand = upper ; 
     }
     // reset the tail and head status 
     head->upper = NULL ; 

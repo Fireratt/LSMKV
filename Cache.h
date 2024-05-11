@@ -6,6 +6,7 @@
 #include <stdint.h>
 #include <algorithm>
 #include "Constants.h"
+#include "tools.h"
 #include "BloomFilter.h"
 // #define DEBUG
 class Cache
@@ -42,5 +43,9 @@ class Cache
         void shellSort(int arr[], int n) ; 
         // delete all the memory 
         void reset() ; 
+        // scan the cache , return all the overlap cacheline and return them in lineList and order it 
+        void scanPossibleLine(uint64_t key1 , uint64_t key2 , int * lineList) ;
+        // for a cacheline , arrive at the index's location . if cant find the index , it should return the previous offset of it 
+        int arrive(int index , uint64_t key) ; 
 };
 

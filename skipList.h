@@ -48,6 +48,8 @@ class skiplist_type
 		void updateTop() ; 							// update the tophead(entrance)
 	public:
 		explicit skiplist_type(double p = 0.5);
+		~skiplist_type() ; 
+
 		int put(key_type key, const value_type &val);   // return 0 : dont have the key , insert . return -1 : have the key ,overwrite
 		//std::optional<value_type> get(key_type key) const;
 		std::string get(key_type key) const;

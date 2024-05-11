@@ -4,6 +4,7 @@
 #include <string>
 #include <stdint.h>
 #include <list>
+#include <unordered_set>				// hashMap , used to save the scaned key (Find is the fatal factor)
 #include "Constants.h"
 #include "Cache.h"
 #include "utils.h"
@@ -45,7 +46,8 @@ class DiskTableManager
         // output when memory full 
         void write(char * sstable , splayArray * vlog, int mmSize) ; 
         // scan all the sstable and return the list in the para
-        void scan(std::list<std::pair<uint64_t, std::string>> &list) ; 
+        void scan(uint64_t key1 , uint64_t key2 , std::list<std::pair<uint64_t, std::string>> &list
+        , std::unordered_set<uint64_t>& scaned) ; 
         // get request from kvstore's memory section
         std::string get(uint64_t key) ; 
         //	initailize the cache until there is no sstable/cache full 
@@ -61,6 +63,9 @@ class DiskTableManager
         int getVlogHead() ; 
         // get the next timeStamp
         int getNextTimeStamp() ; 
-
+        // get the val use the cacheIndex and offset in the cacheline 
+        std::string getValByIndex(int cacheIndex , int offset) ; 
+        // get the val use the cache line header 
+        std::string getValByCacheLine(char * cacheLine, int offset) ; 
 };
 

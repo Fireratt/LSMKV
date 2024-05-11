@@ -10,6 +10,7 @@
 #include "DiskTableManager.h"
 #include "Constants.h"
 #include "Cache.h"
+#include <unordered_set>				// hashMap , used to save the scaned key (Find is the fatal factor)
 // get the memtable's current size ;
 // #define DEBUG
 
