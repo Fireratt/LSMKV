@@ -13,7 +13,10 @@ void PRINT_LIST(const std::list<std::pair<uint64_t, std::string>>& toPrint)
     }
 
 }
-
+bool compareKey(std::pair<uint64_t, std::string>& a , std::pair<uint64_t, std::string>& b)
+{
+    return a.first < b.first ; 
+}
 bool isOverlap(int min1 , int max1 , int min2 , int max2)
 {
     return !((min1 > max2)||(min2>max1)) ; 

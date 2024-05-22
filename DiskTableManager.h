@@ -58,6 +58,7 @@ class DiskTableManager
         void scanDisk() ; 
         // insert new sstable name in the level vector
         void insertSS(int index , std::string& sstableName) ; 
+        
         // get the tail and head for the vlog 
         int getVlogTail() ; 
         int getVlogHead() ; 
@@ -67,5 +68,19 @@ class DiskTableManager
         std::string getValByIndex(int cacheIndex , int offset) ; 
         // get the val use the cache line header 
         std::string getValByCacheLine(char * cacheLine, int offset) ; 
+        // do the compaction for level i 
+        void compaction(int level) ; 
+        // destroy the merged sstable
+        void destroySStable(int level , const std::vector<int>& first , const std::vector<int>& second) ; 
+        // form the name from a sstable and a level
+        void formName(const char * sstable , char * name) ; 
+        // form the full address by the level and fileName 
+        void formAddress(const char * fileName , int level , char * addr) ; 
+        // merge 2 vector's cacheLine 
+        void merge(int insertLevel , const std::vector<int>& first , const std::vector<int>& second) ; 
+        // generate a singleline from the merge . Hands and results should be malloced previously
+        int generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result) ;
+        // write a cacheline to the specific level
+        void writeLineToDisk(int level , char * singleLine) ; 
 };
 

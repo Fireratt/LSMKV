@@ -8,7 +8,7 @@ int main()
     KVStore testMemTable("TEST1","./TEST1/TEST1_VLOG") ; 
     testMemTable.reset() ; 
     char * buf = (char *)malloc(BUFFER_SIZE) ; 
-    int max = 1; 
+    int max = 4096; 
     for(int i = 0 ; i < max ; i++)
     {
         // printf("inserting::%d\n" , i) ; 
@@ -16,8 +16,7 @@ int main()
         sprintf(buf,"SIGNAL%d",i) ; 
         testMemTable.put(i,buf) ; 
     }
-    testMemTable.PRINT_STATUS() ; 
-    testMemTable.reset() ; 
+    // testMemTable.reset() ; 
 
 		// // Test deletions
 		// for (int i = 0; i < max; i += 2)

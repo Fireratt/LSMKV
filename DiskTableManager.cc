@@ -91,6 +91,7 @@ std::string DiskTableManager::get(uint64_t key)
 
 void DiskTableManager::write(char * sstable , splayArray * vlog , int mmSize)
 {
+
 	// if dont have the directory , create one 
 	char * buf = (char*)malloc(BUFFER_SIZE) ; 
 	sprintf(buf , "%s/level-%d" , dir.c_str(), 0) ; 
@@ -127,6 +128,11 @@ void DiskTableManager::write(char * sstable , splayArray * vlog , int mmSize)
 	insertSS(0,sstName) ; 								// update the manager 
 	free(buf) ; 
 	fclose(F_sstable) ; 
+	// the level 0 is full , will do compaction
+	if(levels[0].size() > GET_LEVEL_MAXNUM(0))
+	{
+		compaction(0) ; 
+	}
 }
 
 void DiskTableManager::initCache(const std::string & dir , const std::vector<std::string>& sstables) 
@@ -305,4 +311,207 @@ std::string DiskTableManager::getValByIndex(int index, int offset)
 {
 	char * cacheLine = cache->access(index) ; 
 	return getValByCacheLine(cacheLine,offset) ; 
+}
+
+void DiskTableManager::compaction(int level)
+{
+	int size = levels[level].size() ; 
+	if(size <= GET_LEVEL_MAXNUM(level))	// legal number 
+	{
+		return ; 
+	}
+
+	std::vector<int> currentLevel ;
+	std::vector<int> nextLevel ; 
+	std::vector<int> nextLevel_OVERLAP ; 			// overlap with the currentLevel
+	cache->scanLevels(level , currentLevel) ; 	
+	cache->scanLevels(level+1 , nextLevel) ; 
+	if(level != 0)					// not zero , should select the sstable with biggest timestamp . 
+	{
+		cache->shellSort(currentLevel) ; 
+		currentLevel.erase(currentLevel.begin() + size - GET_LEVEL_MAXNUM(level) , currentLevel.end()) ; 
+	}
+	uint64_t left = 0 ; 
+	uint64_t right = UINT64_MAX ; 
+	cache->getRange(currentLevel , left , right) ; 
+	cache->getOverlap(left , right , nextLevel ,nextLevel_OVERLAP) ; 
+
+	merge(level + 1 , currentLevel , nextLevel_OVERLAP) ; 
+	destroySStable(level,currentLevel , nextLevel_OVERLAP) ; 
+	cache->evictTables(currentLevel , nextLevel_OVERLAP) ; 
+	
+	compaction(level+1) ;			// recursively check if next level need to compaction
+}
+
+void DiskTableManager::merge(int insertLevel , const std::vector<int>& first , const std::vector<int>& second)
+{
+	char * singleLine = (char *)malloc(MAX_SIZE) ; 
+	int firstSize = first.size() ; 
+	int secondSize = second.size() ; 
+	int * hands = (int *)calloc(1,sizeof(int)* (firstSize + secondSize)) ; 	// save the merge's progress in each line ; the unit is key index.
+	
+	int totalKey ;
+
+	while(true)
+	{
+		totalKey = generateLine(first , second , hands , singleLine) ; 
+		if(totalKey <= 0)
+		{
+			break ; 
+		}
+		cache->loadCache(singleLine , insertLevel) ; 
+		writeLineToDisk(insertLevel , singleLine) ; 
+		if(totalKey < KEY_MAXNUM)
+		{
+			break ; 
+		}
+	}
+
+	free(singleLine) ; 
+	free(hands) ;
+}
+
+void DiskTableManager::writeLineToDisk(int level , char * singleLine)
+{
+	char * buf = (char *)malloc(BUFFER_SIZE) ; 
+	if(levels[level].size() == 0)		// not have the unit , so it means not have the directory
+	{
+		sprintf(buf , "%s/level-%d", dir.c_str() , level) ; 
+		std::string directory(buf) ; 
+		utils::mkdir(directory) ; 
+	}
+	char * fileName = (char *)malloc(BUFFER_SIZE) ; 
+	formName(singleLine , fileName) ; 
+	std::string ssName(fileName) ; 
+	insertSS(level , ssName) ; 
+	formAddress(fileName , level , buf) ; 
+	FILE * ssTable = fopen(buf , "w+") ; 
+	int size = SIZE(GET_KEY_NUM(singleLine)) ; 
+	fwrite(singleLine, size , 1 , ssTable) ; 
+	fclose(ssTable) ; 
+	free(buf) ; 
+}
+
+int DiskTableManager::generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result)
+{
+	int keyNum = 0 ; 
+	int length = first.size() + second.size() ; 
+	int firstSize = first.size() ; 
+	BloomFilter bf(bloomSize , 4) ; 
+	int timeStamp = -1 ;
+	while(keyNum < KEY_MAXNUM){
+		uint64_t min = UINT64_MAX ; 			// select minimum from all the line
+		char * selectedKey = 0 ; 
+		int selectedI = -1 ;
+		int selectedCacheLine = -1 ; 
+		for(int i = 0 ; i < length ; i++){
+			if(hands[i] == -1){		// the cacheLine is read over , dont need to access 			
+				continue ; 
+			}
+			int index ;
+			if(i < firstSize){
+				index = first[i] ; 
+			}
+			else{								// read the index from the vector
+				index = second[i - firstSize] ; 
+			}
+			char * keyStart = cache->getKey(hands[i] , index) ; 
+			if(keyStart == 0){ 		// the key is use up 
+				hands[i] = -1 ; 
+				continue ; 
+			}
+			if(GET_KEY(keyStart) < min){
+				min = GET_KEY(keyStart) ; 
+				selectedKey = keyStart ; 
+				selectedI = i ;
+				selectedCacheLine = index ; 
+			}
+			else if(GET_KEY(keyStart) == min){	// need to check the timeStamp when 2 key is equal
+				int selectedTime = cache->getTimeStamp(selectedCacheLine) ;
+				int currentTime = cache->getTimeStamp(index) ;  
+				assert(selectedTime != currentTime) ; 
+				if(selectedTime > currentTime){
+					hands[i] ++ ; 			// only one key can be reserved 
+				}
+				else{
+					hands[selectedI] ++ ;
+					min = GET_KEY(keyStart) ; 
+					selectedKey = keyStart ; 
+					selectedI = i ;
+					selectedCacheLine = index ; 
+				}
+			}
+		}
+		if(selectedKey){
+
+			bf.insert(GET_KEY(selectedKey)) ; 
+			
+			memcpy(KEY_ADDR(keyNum , result) , selectedKey , keySize) ; 
+			hands[selectedI]++ ; 				// move the hand to point at the next element
+			keyNum ++ ;
+
+			int insertTimeStamp = cache->getTimeStamp(selectedCacheLine) ; 	// check and update the timeStamp
+			if(insertTimeStamp > timeStamp)
+			{
+				timeStamp = insertTimeStamp ; 
+			}
+		}
+		else{	// no more key in the array
+			break ; 
+		}
+	}
+	// write the header and bf 
+	int min =GET_KEY(KEY_ADDR(0 , result)) ; 
+	int max = GET_KEY(KEY_ADDR(keyNum-1 , result)) ; 
+	SETMIN(result , min) ; 
+	SETMAX(result , max) ; 
+	SETKEYNUM(result , keyNum) ; 
+	SETTIME(result , timeStamp) ; 
+	return keyNum ; 
+}
+
+void DiskTableManager::formName(const char * sstable , char * name)
+{
+	uint64_t max = GETMAX(sstable) ; 
+	uint64_t min = GETMIN(sstable) ; 
+	uint64_t timeStamp = GETTIME(sstable) ;
+
+
+	sprintf(name , "%lu_%lu-%lu.sst" , timeStamp , min , max) ; 
+}
+
+void DiskTableManager::formAddress(const char * fileName , int level , char * addr)
+{
+	sprintf(addr , "%s/level-%d/%s" , dir.c_str() , level , fileName) ; 
+}
+
+void DiskTableManager::destroySStable(int level , const std::vector<int>& first , const std::vector<int>& second)
+{
+	int length1 = first.size() ; 
+	int length2 = second.size() ; 
+	char * fileName =  (char *)malloc(BUFFER_SIZE) ; 
+	char * buf = (char *)malloc(BUFFER_SIZE) ; 
+	for(int i = 0 ; i < length1 + length2 ; i++)
+	{
+		char * cacheLine ; 
+		if(i < length1)
+		{
+			cacheLine = cache->access(first[i]) ; 
+		}
+		else
+		{
+			cacheLine = cache->access(second[i - length1]) ; 
+		}
+		formName(cacheLine , fileName) ; 
+		#ifdef DEBUG
+		printf("DestroySS:FormName:%s\n" , fileName) ; 
+		#endif
+		auto toRemove = std::find(levels[level].begin() , levels[level].end() , std::string(fileName)) ; 
+		assert(toRemove != levels[level].end()) ;
+		levels[level].erase(toRemove) ; 
+		formAddress(fileName , level , buf) ; 
+		utils::rmfile(std::string(buf)) ; 
+	}
+	free(fileName) ; 
+	free(buf) ; 
 }

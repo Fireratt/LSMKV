@@ -12,3 +12,4 @@ void PRINT_LIST(const std::list<std::pair<uint64_t, std::string>>& toPrint) ;
 bool isOverlap(int max1 , int min1 , int max2 , int min2) ; 
 // utilize the write copy 
 void STR_DeepCopy(char * buffer , std::string & ret) ; 
+bool compareKey(std::pair<uint64_t, std::string>& a , std::pair<uint64_t, std::string>& b) ; 

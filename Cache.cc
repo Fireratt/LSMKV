@@ -2,11 +2,11 @@
 Cache::Cache(int unitSize , BloomFilter * bf):unitSize(unitSize) , bf(bf)
 {
     memory.reserve(100) ; 
+    levelIndex.reserve(100) ; 
     loaded = 0 ;
 }
 
-void Cache::loadCache(FILE* toLoad)
-{
+void Cache::loadCache(FILE* toLoad , int level){
     if(!toLoad)
     {
         printf("ERROR:: Cant Read the FILE !\n") ; 
@@ -24,6 +24,7 @@ void Cache::loadCache(FILE* toLoad)
     char * newCache = (char *)malloc(MAX_SIZE) ; 
     fread(newCache,len,1,toLoad) ; 
     memory.push_back(newCache) ; 
+    levelIndex.push_back(level) ; 
     loaded ++ ; 
     return ; 
 }
@@ -126,8 +127,8 @@ int Cache::searchIndex(uint64_t key , int index)
     int offset = headSize + bloomSize ; 
     // load the Size from the header
     uint64_t cacheSize = ((int64_t *)cash)[1] ; 
-    uint64_t min = ((int64_t *)cash)[2] ; 
-    uint64_t max = ((int64_t *)cash)[3] ; 
+    uint64_t min = ((uint64_t *)cash)[2] ; 
+    uint64_t max = ((uint64_t *)cash)[3] ; 
 
     int head = 0 ; 
     int tail = cacheSize-1 ;                // last key
@@ -217,6 +218,7 @@ void Cache::reset()
         free(*begin) ; 
     }
     memory.clear() ; 
+    levelIndex.clear() ; 
 
 }
 
@@ -231,7 +233,7 @@ int Cache::arrive(int index , uint64_t key)
     while(low <= high)
     {
         mid = (low + high)/ 2 ;
-        int midKey =GET_KEY(cacheLine +  KEY_INDEX(mid , FRONT_OFFSET) ) ; 
+        uint64_t midKey =GET_KEY(cacheLine +  KEY_INDEX(mid , FRONT_OFFSET) ) ; 
         if(key == midKey)
         {
             return KEY_INDEX(mid , FRONT_OFFSET) ; 
@@ -266,4 +268,152 @@ void Cache::scanPossibleLine(uint64_t key1 , uint64_t key2 , int * lineList)
     // sort the lineList due to the decrease order 
     shellSort(lineList , i) ; 
     lineList[i] = -1 ; 
+}
+
+void Cache::shellSort(std::vector<int> toSort) 
+{
+    int i, j, temp, gap;
+    int n = toSort.size() ; 
+    // 初始间隔设定为数组长度的一半
+    for (gap =  n/ 2; gap > 0; gap /= 2) {
+        // 对每个间隔进行插入排序
+        for (i = gap; i < n; i++) {
+            temp = toSort[i];
+            // 对当前间隔内的元素进行插入排序
+            for (j = i; j >= gap && sort_timeStamp( temp , toSort[j - gap] ); j -= gap) {
+                toSort[j] = toSort[j - gap];
+            }
+            toSort[j] = temp;
+        }
+    }
+}
+
+void Cache::scanLevels(int level , std::vector<int>& sstables) const
+{
+    for(int i = 0 ; i < loaded ; i++)
+    {
+        if(levelIndex[i] == level)
+        {
+            sstables.push_back(i) ; 
+        }
+    }
+}
+
+void Cache::getRange(const std::vector<int>& sstables , uint64_t&  left , uint64_t&  right) const
+{
+    int length = sstables.size() ; 
+    left = UINT64_MAX ; 
+    right = 0 ; 
+    for(int i = 0 ; i < length ; i++)
+    {
+        int index = sstables[i] ; 
+        uint64_t max = getMax(index) ; 
+        uint64_t min = getMin(index) ; 
+        if(max > right)
+        {
+            right = max ; 
+        }
+        if(min < left)
+        {
+            left = min ; 
+        }
+    }
+}
+
+void Cache::getOverlap(uint64_t left , uint64_t right ,const std::vector<int>& sstables , std::vector<int>& overlap) const 
+{
+    int length = sstables.size() ;
+    for(int i = 0 ; i < length ; i++)
+    {
+        int max = getMax(sstables[i]) ;
+        int min = getMin(sstables[i]) ; 
+
+        if(isOverlap(right , left , max , min))
+        {
+            overlap.push_back(sstables[i]) ; 
+        }
+    }
+}
+
+void Cache::evictTables(const std::vector<int>& sstables1 , const std::vector<int>& sstables2) 
+{
+    int length = sstables1.size() + sstables2.size() ;  // calculate the size that need to delete
+    std::unordered_set<int> toDelete ;                  // record the index that need to be delete
+    int length1 = sstables1.size() ; 
+    int length2 = sstables2.size() ; 
+    for(int i = 0 ; i < length1 ; i++)
+    {
+        toDelete.insert(sstables1[i]) ; 
+    }
+
+    for(int i = 0 ; i < length2 ; i++)
+    {
+        toDelete.insert(sstables2[i]) ; 
+    }
+    int size = memory.size() ;
+    int hand = size - 1 ; 
+    auto begin = toDelete.begin() ; 
+    auto end = toDelete.end() ;
+    while(hand >= size - length)
+    {
+        if(toDelete.find(hand) == end)          // dont have the hand in toDelete , can do the swap
+        {
+            char * tem = memory[hand] ; 
+            int tem2 = levelIndex[hand] ; 
+            memory[hand] = memory[*begin] ; 
+            memory[*begin] = tem ; 
+            levelIndex[hand] = levelIndex[*begin] ; 
+            levelIndex[*begin] = tem2 ; 
+            *begin++ ;
+        }
+        else if(*begin == hand)
+        {
+            *begin ++ ;
+        }
+        // have the hand , and not the current begin . make the *begin the same , move the hand to find the insert location ; 
+        hand -- ;
+    }
+    // all the evict line at the end , pop them 
+    memory.erase(memory.end() - length , memory.end()) ; 
+    levelIndex.erase(levelIndex.end() - length , levelIndex.end()) ; 
+}   
+
+void Cache::loadCache(char * toLoad , int level)
+{
+    int keyNum = GET_KEY_NUM(toLoad) ; 
+    int totalLength = SIZE(keyNum) ; 
+
+    char * newLine = (char *)malloc(totalLength) ; 
+    memcpy(newLine , toLoad , totalLength) ; 
+    memory.push_back(newLine) ;
+    levelIndex.push_back(level) ; 
+    #ifdef DEBUG
+        printf("loadCache from line , level:%d\n", level) ; 
+        PRINT_STATUS() ; 
+    #endif
+}
+
+char * Cache::getKey(int keyIndex , int cacheLineIndex ) 
+{
+    char * cacheLine = access(cacheLineIndex) ;
+    int keyNum = GET_KEY_NUM(cacheLine) ; 
+
+    if(keyIndex < 0 || keyIndex >= keyNum)  // invalid index
+    {
+        return 0 ; 
+    }
+
+    return KEY_ADDR(keyIndex , cacheLine) ; 
+}
+
+void Cache::PRINT_STATUS()
+{
+    int length = memory.size() ; 
+    printf("========== START PRINT CACHE STATE ==========\n") ; 
+    printf("total Length:%d level Length:%d\n" , length , levelIndex.size()) ; 
+    for(int i = 0 ; i < length ; i++)
+    {
+        printf("cacheLine%d : timeStamp = %lu , level = %d\n" , i , getTimeStamp(i) , levelIndex[i]) ;
+    }
+    printf("========== Cache State Print Finish ==========\n") ; 
 }
