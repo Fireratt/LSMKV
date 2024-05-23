@@ -82,5 +82,7 @@ class DiskTableManager
         int generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result) ;
         // write a cacheline to the specific level
         void writeLineToDisk(int level , char * singleLine) ; 
+        // get the cache
+        Cache*  getCache() ; 
 };
 

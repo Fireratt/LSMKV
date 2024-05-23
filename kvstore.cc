@@ -86,7 +86,8 @@ bool KVStore::del(uint64_t key)
 	// find a DELETE_SIGN in memory table , it definitely be deleted . 
 	// only when cant find the key , we need to find the disk
 	// it should handle memtable's head is also 0's situation ; 
-	if(((memtable->getHead()!=target && memtable->getTopHead()!=target &&(target->key == key)) &&target->val == DELETE_SIGN) || (target->key!=key 		// not in the memtable
+	if((((memtable->getHead()!=target && memtable->getTopHead()!=target) &&(target->key == key)) && target->val == DELETE_SIGN) || 
+	((target->key!=key || (memtable->getHead()==target || memtable->getTopHead()==target))		// not in the memtable
 	&& diskManager->get(key) == ""))																// not in the storage
 	{
 		return 0 ; 
@@ -295,3 +296,8 @@ void KVStore::writeSS(char * sstable , int index , uint64_t key ,  uint64_t bias
 // 		fclose(ss) ; 
 // 	}
 // }
+
+void KVStore::PRINT_CACHE()
+{
+	diskManager->getCache()->PRINT_STATUS() ; 
+}

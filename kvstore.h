@@ -65,4 +65,6 @@ public:
 
 	// print the status of memTable
 	void PRINT_STATUS() ; 
+	// print the status for cache
+	void PRINT_CACHE() ; 
 };

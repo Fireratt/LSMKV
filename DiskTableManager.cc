@@ -467,6 +467,7 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 	SETMAX(result , max) ; 
 	SETKEYNUM(result , keyNum) ; 
 	SETTIME(result , timeStamp) ; 
+	memcpy(result+headSize , bf.access() , bloomSize) ; 
 	return keyNum ; 
 }
 
@@ -514,4 +515,9 @@ void DiskTableManager::destroySStable(int level , const std::vector<int>& first 
 	}
 	free(fileName) ; 
 	free(buf) ; 
+}
+
+Cache* DiskTableManager::getCache()
+{
+	return cache ; 
 }
