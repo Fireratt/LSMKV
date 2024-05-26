@@ -13,7 +13,7 @@
 #include <unordered_set>				// hashMap , used to save the scaned key (Find is the fatal factor)
 // get the memtable's current size ;
 // #define DEBUG
-
+// #define GC_DEBUG
 class KVStore : public KVStoreAPI
 {
 	// You can add your implementation here
@@ -26,16 +26,8 @@ private:
 	void outputTables(char * sstable , splayArray * vlog , FILE * F_sstable , FILE * F_vlog) const ; 
 	// the function to insert a key in the sstable 
 	void writeSS(char * sstable, int index , uint64_t key ,  uint64_t biase , uint32_t len ) const ; 
-	// The Number of Cached sstable
-	int cached ;
-	// initialize the tail and head of the vlog
-	void initVlog() ; 
-	// cache the sstable
-	void loadSStable(const std::string & name) ; 
 	// the bloom filter of the memtable ; it will be used by outside array to judge as well
 	BloomFilter * bloomFilter ; 
-	// the vlog's file descriptor
-	FILE * vlogFile ;
 	// the files that had been loaded in the cache 
 	std::vector<std::string> cachedSS ; 
 	// the disk managers 
@@ -60,11 +52,10 @@ public:
  // Push the MemTable into the ssTable and vlog ; the naming rules : use max and min key to name ; return the name of sstable
 	void saveMem() const ;
 
-//	initailize the cache until there is no sstable/cache full 
-	void initCache(const std::string & dir , const std::vector<std::string>& sstables) ;
-
 	// print the status of memTable
 	void PRINT_STATUS() ; 
 	// print the status for cache
 	void PRINT_CACHE() ; 
+	// get the vlog offset from key . if the key in memory table , return -1 ; if the key cant find , abort the program
+	uint64_t getVlogOffset(uint64_t key) ;
 };

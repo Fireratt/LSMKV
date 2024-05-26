@@ -6,7 +6,7 @@ Cache::Cache(int unitSize , BloomFilter * bf):unitSize(unitSize) , bf(bf)
     loaded = 0 ;
 }
 
-void Cache::loadCache(FILE* toLoad , int level){
+void Cache::loadCache(FILE* toLoad , int level){ 
     if(!toLoad)
     {
         printf("ERROR:: Cant Read the FILE !\n") ; 
@@ -339,6 +339,7 @@ void Cache::evictTables(const std::vector<int>& sstables1 , const std::vector<in
 {
     int length = sstables1.size() + sstables2.size() ;  // calculate the size that need to delete
     std::unordered_set<int> toDelete ;                  // record the index that need to be delete
+    std::unordered_set<int> haveParsed ; 
     int length1 = sstables1.size() ; 
     int length2 = sstables2.size() ; 
     for(int i = 0 ; i < length1 ; i++)
@@ -356,7 +357,7 @@ void Cache::evictTables(const std::vector<int>& sstables1 , const std::vector<in
     auto end = toDelete.end() ;
     while(hand >= size - length)
     {
-        if(toDelete.find(hand) == end)          // dont have the hand in toDelete , can do the swap
+        if(toDelete.find(hand) == end || haveParsed.find(hand) != haveParsed.end())          // dont have the hand in toDelete , can do the swap
         {
             char * tem = memory[hand] ; 
             int tem2 = levelIndex[hand] ; 
@@ -364,18 +365,26 @@ void Cache::evictTables(const std::vector<int>& sstables1 , const std::vector<in
             memory[*begin] = tem ; 
             levelIndex[hand] = levelIndex[*begin] ; 
             levelIndex[*begin] = tem2 ; 
-            *begin++ ;
+            haveParsed.insert(*begin) ; 
+            begin++ ;
         }
         else if(*begin == hand)
         {
-            *begin ++ ;
+            begin ++ ;
         }
         // have the hand , and not the current begin . make the *begin the same , move the hand to find the insert location ; 
         hand -- ;
+        #ifdef GC_DEBUG
+            if(sstables1[0] == 33)
+            {
+                PRINT_STATUS() ; 
+            }
+        #endif
     }
     // all the evict line at the end , pop them 
     memory.erase(memory.end() - length , memory.end()) ; 
     levelIndex.erase(levelIndex.end() - length , levelIndex.end()) ; 
+    loaded -= length ; 
 }   
 
 void Cache::loadCache(char * toLoad , int level)
@@ -391,6 +400,7 @@ void Cache::loadCache(char * toLoad , int level)
         printf("loadCache from line , level:%d\n", level) ; 
         PRINT_STATUS() ; 
     #endif
+    loaded++ ; 
 }
 
 char * Cache::getKey(int keyIndex , int cacheLineIndex ) 

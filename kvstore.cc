@@ -1,5 +1,5 @@
 #include "kvstore.h"
-KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(dir, vlog) ,cached(0)
+KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(dir, vlog)
 {
 	// initialize memTable
 	memtable = new skiplist::skiplist_type(0.5) ; 
@@ -12,6 +12,7 @@ KVStore::KVStore(const std::string &dir, const std::string &vlog) : KVStoreAPI(d
 
 KVStore::~KVStore()
 {
+	PRINT_STATUS() ; 
 	saveMem() ; 
 	delete memtable ; 
 	delete bloomFilter ; 
@@ -52,13 +53,11 @@ void KVStore::put(uint64_t key, const std::string &s)
  * An empty string indicates not found.
  */
 std::string KVStore::get(uint64_t key)
-{			
+{
 	std::string result ; 
 	if(bloomFilter->isInclude(key))
 	{
-
 		result = memtable->get(key) ; 
-
 	}
 	else
 	{
@@ -147,6 +146,34 @@ void KVStore::scan(uint64_t key1, uint64_t key2, std::list<std::pair<uint64_t, s
  */
 void KVStore::gc(uint64_t chunk_size)
 {
+	#ifdef GC_DEBUG
+		printf("Trigger GC\n") ; 
+	#endif
+	uint64_t tail = diskManager->getVlogTail() ; 
+	uint64_t current = tail ;
+	while(current - tail < chunk_size)
+	{
+		uint64_t key ;
+		uint64_t tem = current ;
+		std::string val ; 
+		current = diskManager->readVlogFile(current , key , val) ; 
+		if(tem == getVlogOffset(key))
+		{
+			#ifdef GC_DEBUG
+				if(key != val.length()-1)
+				{
+					printf("key:%d , val:%s\n" , key , val.c_str()) ; // abort
+					assert(0) ; 
+				}
+			#endif
+			put(key , val) ; 	// reinsert 
+		}
+	}
+
+	saveMem() ; 
+	bloomFilter->reset() ;
+	memtable->reset() ; 
+	diskManager->dealloc(current-tail) ; 
 }
 
 void KVStore::saveMem() const 
@@ -156,7 +183,6 @@ void KVStore::saveMem() const
 		return ;
 	}
 	char * sstable = (char*)(malloc(MAX_SIZE)) ; 	// it will be used as the int32* / int64* as well
-
 	splayArray * vlog = new splayArray ; 
 	char * buffer = (char *)malloc(BUFFER_SIZE) ; 
 	// sprintf(buffer,"%lu-%lu.sst",memtable->min()->key,memtable->max()->key) ; 
@@ -177,7 +203,6 @@ void KVStore::writeTables(char * sstable , splayArray * vlog) const
 {
 	int n = memtable->size() ; 
 	uint64_t * sstable_64 = (uint64_t *)sstable ; 
-	uint32_t * sstable_32 =(uint32_t *) sstable ; 
 	splayArray buffer ;
 
 	skiplist::skiplist_node * firstEle = memtable->min() ; 	// use as a iterator
@@ -300,4 +325,14 @@ void KVStore::writeSS(char * sstable , int index , uint64_t key ,  uint64_t bias
 void KVStore::PRINT_CACHE()
 {
 	diskManager->getCache()->PRINT_STATUS() ; 
+}
+
+uint64_t KVStore::getVlogOffset(uint64_t key)
+{
+	if(!STR_EQUAL(memtable->get(key).c_str() , "")) 	// in the memtable
+	{
+		return -1 ; 
+	} 
+
+	return diskManager->getVlogOffset(key) ; 
 }

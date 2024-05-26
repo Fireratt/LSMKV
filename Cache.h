@@ -12,6 +12,7 @@
 #include "tools.h"
 #include "BloomFilter.h"
 // #define DEBUG
+// #define GC_DEBUG
 class Cache
 {
     private :   // the cache nolonger have the size limit

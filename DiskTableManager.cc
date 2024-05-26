@@ -42,7 +42,7 @@ void DiskTableManager::initVlog()
 	char magic = fgetc(vlogFile) ; 
 	while(magic!=EOF)
 	{
-		if(magic==0xff)
+		if(magic==MAGIC)
 		{
 			tail = ftell(vlogFile) ; 
 			break ; 
@@ -54,7 +54,7 @@ void DiskTableManager::initVlog()
 	return ; 
 }
 
-std::string DiskTableManager::get(uint64_t key)
+std::string DiskTableManager::get(uint64_t key , uint64_t * offset_ret)
 {
 		int offset ;
         std::string result = std::string("") ; 
@@ -66,6 +66,9 @@ std::string DiskTableManager::get(uint64_t key)
 		{
 			char * sstable = cache->access(index) ; 
 			// get the offset in vlog 
+			#ifdef GC_DEBUG
+			printf("sstable:%p , offset:%d\n" , sstable , offset) ; 
+			#endif
 			uint64_t vlogOffset = ((uint64_t *)(sstable+offset))[1] ; 
 			// get the length of value
 			uint32_t length = ((uint32_t *)(sstable+offset))[4] ; 
@@ -84,6 +87,10 @@ std::string DiskTableManager::get(uint64_t key)
 
 			free(buffer) ; 
 			// find in cache , return 
+			if(offset_ret)
+			{
+				*offset_ret = vlogOffset ; 
+			}
 			return result ; 
 		}
 		return result ; 		// cant find 
@@ -255,7 +262,7 @@ void DiskTableManager::scanDisk()
 				free(buf) ; 
 				return ; 
 			}
-			cache->loadCache(sstable) ; 
+			cache->loadCache(sstable , i) ; 
 			int currentTimeStamp = cache->getTimeStamp(cache->size()-1) ; 
 			if(currentTimeStamp > timeStamp)					// update the global timeStamp
 			{
@@ -272,11 +279,11 @@ void DiskTableManager::insertSS(int index , std::string& sstableName)
 	levels[index].push_back(sstableName) ; 
 }
 
-int DiskTableManager::getVlogTail()
+uint64_t DiskTableManager::getVlogTail()
 {
 	return tail ; 
 }
-int DiskTableManager::getVlogHead()
+uint64_t DiskTableManager::getVlogHead()
 {
 	return head ; 
 }
@@ -390,6 +397,7 @@ void DiskTableManager::writeLineToDisk(int level , char * singleLine)
 	fwrite(singleLine, size , 1 , ssTable) ; 
 	fclose(ssTable) ; 
 	free(buf) ; 
+	free(fileName) ; 
 }
 
 int DiskTableManager::generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result)
@@ -520,4 +528,45 @@ void DiskTableManager::destroySStable(int level , const std::vector<int>& first 
 Cache* DiskTableManager::getCache()
 {
 	return cache ; 
+}
+
+int DiskTableManager::readVlogFile(int offset , uint64_t& key , std::string & val) 
+{
+	char * buf = (char *)malloc(BUFFER_SIZE) ; 
+	fseek(vlogFile , offset+VLOG_KEY_LOC, SEEK_SET) ; 	// to the key location 
+	fread(buf , 8 , 1 , vlogFile) ; 
+	buf[8] = 0 ; 						// make it a string end 
+	key = ((uint64_t*)buf)[0] ; 
+
+	fread(buf , 4 , 1 , vlogFile) ; 	// read the vlen ;
+	int vlen = ((int*)buf)[0] ; 
+	buf[4] = 0 ; 						// make it a string end 
+
+	fread(buf , vlen , 1 , vlogFile) ; 
+	buf[vlen] = 0 ; 						// make it a string end 
+	val.assign(buf) ; 
+			#ifdef GC_DEBUG
+				if(key != val.length()-1)
+				{
+					printf("key:%d , buf:%s vlen:%d valLen:%d\n" , key , buf, vlen , val.length()) ; // abort
+					assert(0) ; 
+				}
+			#endif
+	free(buf) ; 
+
+	return offset + vlen + VLOG_HEAD ; 
+}
+
+void DiskTableManager::dealloc(int length)
+{
+	utils::de_alloc_file(vlog , tail , length) ; 
+	tail = tail + length ; 			// update the tail after file location change 
+}
+
+uint64_t DiskTableManager::getVlogOffset(uint64_t key)
+{
+	uint64_t vlogOffset ;
+	get(key , &vlogOffset) ; 
+
+	return vlogOffset ; 
 }

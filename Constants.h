@@ -11,6 +11,8 @@ constexpr char * LEVEL_NAME = "level-" ;
 constexpr char MAGIC = 0xff ; 
 constexpr int BUFFER_SIZE = 1<<17 ; 
 constexpr int CACHE_SIZE = 20 ; 
+constexpr int VLOG_KEY_LOC = 3 ; 
+constexpr int VLOG_VLEN_LOC = 11 ; 
 constexpr int VLOG_HEAD = 15 ; 
 constexpr int VLEN_LOC = 16 ; 
 constexpr int OFFSET_LOC = 8 ; 
@@ -32,7 +34,7 @@ constexpr int MAX_LEVEL = 30 ;
 #define SETKEYNUM(sstable , num) (((int64_t*)(sstable))[1] = num) 
 // the cache will use 
 #define GET_VLEN(startKey) (*(int*)((char*)(startKey) + VLEN_LOC))
-#define GET_OFFSET(startKey) (*(int64_t*)((char*)(startKey) + OFFSET_LOC))
-#define GET_KEY(startKey) (*(int64_t*)((char*)(startKey) + 0))
-#define GET_KEY_NUM(cacheLine) (*(int64_t*)((char*)(cacheLine) + KEYNUM_LOC))
+#define GET_OFFSET(startKey) (*(uint64_t*)((char*)(startKey) + OFFSET_LOC))
+#define GET_KEY(startKey) (*(uint64_t*)((char*)(startKey) + 0))
+#define GET_KEY_NUM(cacheLine) (*(uint64_t*)((char*)(cacheLine) + KEYNUM_LOC))
 #define NEXT_KEY(keyOffset) ((keyOffset)+keySize)

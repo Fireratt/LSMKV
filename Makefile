@@ -1,7 +1,7 @@
 
 LINK.o = $(LINK.cc)
-CXXFLAGS = -std=c++14 -Wall -O2 -fcommon -g -fsanitize=address
-
+#CXXFLAGS = -std=c++14 -Wall -O2 -fcommon -g -fsanitize=address
+CXXFLAGS = -std=c++14 -Wall -Og -fcommon -g
 all: correctness persistence
 
 test: testRead skipListTest

@@ -11,6 +11,7 @@
 #include "BloomFilter.h"
 #include "splayArray.h"
 // #define DEBUG
+// #define GC_DEBUG
 // this class was used to manage the connection between disk and memory's jumptable
 // it will be used as a proxy for memory to communicate with the cache as well 
 class DiskTableManager
@@ -30,9 +31,9 @@ class DiskTableManager
         // initialize the tail and head of the vlog
         void initVlog() ; 
         // The tail of Vlog ; unit : byte
-        int tail ;
+        uint64_t tail ;
         // The head of vlog (the size of the file)
-        int head ; 
+        uint64_t head ; 
         // The Number of Cached sstable
         int cached ;
         // the vlog's file descriptor
@@ -48,8 +49,8 @@ class DiskTableManager
         // scan all the sstable and return the list in the para
         void scan(uint64_t key1 , uint64_t key2 , std::list<std::pair<uint64_t, std::string>> &list
         , std::unordered_set<uint64_t>& scaned) ; 
-        // get request from kvstore's memory section
-        std::string get(uint64_t key) ; 
+        // get request from kvstore's memory section || if pass a not null offset , it will return the offset in the vlog as well
+        std::string get(uint64_t key , uint64_t * offset_ret = NULL) ; 
         //	initailize the cache until there is no sstable/cache full 
 	    void initCache(const std::string & dir , const std::vector<std::string>& sstables) ;
         // delete the store
@@ -60,8 +61,8 @@ class DiskTableManager
         void insertSS(int index , std::string& sstableName) ; 
         
         // get the tail and head for the vlog 
-        int getVlogTail() ; 
-        int getVlogHead() ; 
+        uint64_t getVlogTail() ; 
+        uint64_t getVlogHead() ; 
         // get the next timeStamp
         int getNextTimeStamp() ; 
         // get the val use the cacheIndex and offset in the cacheline 
@@ -84,5 +85,11 @@ class DiskTableManager
         void writeLineToDisk(int level , char * singleLine) ; 
         // get the cache
         Cache*  getCache() ; 
+        // get the key and value from the vlog file , return in the parameter , return value is the next offset 
+        int readVlogFile(int offset , uint64_t& key , std::string & val) ; 
+        // do dealloc in the vlog
+        void dealloc(int length) ; 
+        // get the vlog offset by the key 
+        uint64_t getVlogOffset(uint64_t key) ; 
 };
 

@@ -11,7 +11,7 @@
 class PersistenceTest : public Test
 {
 private:
-	const uint64_t TEST_MAX = 1024 * 8;
+	const uint64_t TEST_MAX = 1024 * 32;
 	const uint64_t GC_TRIGGER = 1024;
 
 public:
@@ -128,19 +128,12 @@ public:
 			{
 			case 0:
 				EXPECT(std::string(i + 1, 't'), store.get(i));
-				// assert(std::string(i + 1, 't') == store.get(i)) ; 
-				if(std::string(i + 1, 't') != store.get(i))
-				{
-					printf("ERRORLOCATION:%d\n" , i) ; 
-				}
 				break;
 			case 1:
 				EXPECT(std::string(i + 1, 't'), store.get(i));
-				// assert(std::string(i + 1, 't') == store.get(i)) ; 
 				break;
 			case 2:
 				EXPECT(not_found, store.get(i));
-				// assert(not_found == store.get(i)) ; 
 				break;
 			case 3:
 				EXPECT(std::string(i + 1, 's'), store.get(i));
