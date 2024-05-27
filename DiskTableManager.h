@@ -11,7 +11,7 @@
 #include "BloomFilter.h"
 #include "splayArray.h"
 // #define DEBUG
-// #define GC_DEBUG
+#define GC_DEBUG
 // this class was used to manage the connection between disk and memory's jumptable
 // it will be used as a proxy for memory to communicate with the cache as well 
 class DiskTableManager
@@ -78,9 +78,10 @@ class DiskTableManager
         // form the full address by the level and fileName 
         void formAddress(const char * fileName , int level , char * addr) ; 
         // merge 2 vector's cacheLine 
-        void merge(int insertLevel , const std::vector<int>& first , const std::vector<int>& second) ; 
+        void merge(int insertLevel , const std::vector<int>& first , std::vector<int>& second) ; 
         // generate a singleline from the merge . Hands and results should be malloced previously
-        int generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result) ;
+        // it will return a error code in the parameter
+        int generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result , int& relatedTableCode) ;
         // write a cacheline to the specific level
         void writeLineToDisk(int level , char * singleLine) ; 
         // get the cache
@@ -91,5 +92,9 @@ class DiskTableManager
         void dealloc(int length) ; 
         // get the vlog offset by the key 
         uint64_t getVlogOffset(uint64_t key) ; 
+        // print the single level status 
+        void PRINT_LEVEL(int i) const; 
+        // print the whole level status
+        void PRINT_STATUS() const ;  
 };
 

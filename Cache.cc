@@ -86,7 +86,16 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
         return -1 ; 
     }
     // update times
+    // #ifdef GC_DEBUG
+    // for(int i = 0 ; i < loaded ; i++)
+    // {
+    //     if (posList[i] == -1)
+    //         break ; 
+    //         printf("Selected key's level%d , timeStamp:%lu , min:%lu , max:%lu\n" ,getLevel(posList[i]), getTimeStamp(posList[i]) , 
+    //         getMin(posList[i]) , getMax(posList[i])) ;  
+    // }
 
+	// #endif
     for(int i = 0 ; i < loaded ; i++)
     {
         // read the end tag
@@ -94,6 +103,7 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
         {
             break ;
         }
+
         int pos = posList[i] ; 
         char * cash = memory[pos] ; 
         // may in it 
@@ -113,6 +123,7 @@ int Cache::access(uint64_t key , const BloomFilter *judger, int & offset)
             else
             {
                 free(posList) ; 
+
                 return pos ; 
             }
         }
@@ -184,10 +195,15 @@ uint64_t Cache::getTimeStamp(int index) const
 {
     return *(uint64_t *)memory[index] ; 
 }
-
+// the higher the front ; same timeStamp, level smaller the front
 bool Cache::sort_timeStamp(int index1 , int index2)
 {
-    return getTimeStamp(index1) > getTimeStamp(index2) ; 
+    bool result = getTimeStamp(index1) > getTimeStamp(index2) ; 
+    if(getTimeStamp(index1) == getTimeStamp(index2))
+    {
+        result = getLevel(index1) < getLevel(index2) ; 
+    }
+    return result ; 
 }
 
 void Cache::shellSort(int arr[], int n) {
@@ -270,7 +286,7 @@ void Cache::scanPossibleLine(uint64_t key1 , uint64_t key2 , int * lineList)
     lineList[i] = -1 ; 
 }
 
-void Cache::shellSort(std::vector<int> toSort) 
+void Cache::shellSort(std::vector<int>& toSort) 
 {
     int i, j, temp, gap;
     int n = toSort.size() ; 
@@ -328,7 +344,7 @@ void Cache::getOverlap(uint64_t left , uint64_t right ,const std::vector<int>& s
         int max = getMax(sstables[i]) ;
         int min = getMin(sstables[i]) ; 
 
-        if(isOverlap(right , left , max , min))
+        if(isOverlap(left ,right , min , max))
         {
             overlap.push_back(sstables[i]) ; 
         }
@@ -426,4 +442,9 @@ void Cache::PRINT_STATUS()
         printf("cacheLine%d : timeStamp = %lu , level = %d\n" , i , getTimeStamp(i) , levelIndex[i]) ;
     }
     printf("========== Cache State Print Finish ==========\n") ; 
+}
+
+int Cache::getLevel(int index) const
+{
+    return levelIndex[index] ; 
 }

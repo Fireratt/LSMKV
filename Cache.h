@@ -22,8 +22,7 @@ class Cache
         int unitSize ;                          // each memory location's size . unit:byte
         int loaded ;                            // current loaded Number ; 
         BloomFilter * bf ;                      // the bloomFilter used to check for the key ; it will use a static method 
-        uint64_t getMin(int index) const;            // get the minimun key of a sstable
-        uint64_t getMax(int index) const;            // get the maximum key of a sstable
+
         // get the index according to the key ; if cant find it in the Cache , return 0. if may in it return the list in the variable and return 1.
         // The end tag of indexList is -1
         int getIndex(uint64_t key , int * indexList);
@@ -44,11 +43,14 @@ class Cache
         // get the timeStamp of a index
         uint64_t getTimeStamp(int index) const ;
         // compare the timestamp to sort 
+        uint64_t getMin(int index) const;            // get the minimun key of a sstable
+        uint64_t getMax(int index) const;            // get the maximum key of a sstable
+        int getLevel(int index) const ; 
         bool sort_timeStamp(int index1 , int index2); 
         // sort for timeStamp , bigger the front
         void shellSort(int arr[], int n) ; 
         // sort the vector for timeStamp , bigger the front
-        void shellSort(std::vector<int> toSort) ; 
+        void shellSort(std::vector<int>& toSort) ; 
         // delete all the memory 
         void reset() ; 
         // scan the cache , return all the overlap cacheline and return them in lineList and order it 

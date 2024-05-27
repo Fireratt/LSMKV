@@ -13,7 +13,7 @@
 #include <unordered_set>				// hashMap , used to save the scaned key (Find is the fatal factor)
 // get the memtable's current size ;
 // #define DEBUG
-// #define GC_DEBUG
+#define GC_DEBUG
 class KVStore : public KVStoreAPI
 {
 	// You can add your implementation here

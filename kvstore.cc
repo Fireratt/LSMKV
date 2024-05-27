@@ -157,15 +157,15 @@ void KVStore::gc(uint64_t chunk_size)
 		uint64_t tem = current ;
 		std::string val ; 
 		current = diskManager->readVlogFile(current , key , val) ; 
+		#ifdef GC_DEBUG
+			if(key == 4001)
+				printf("GC: key :%lu current:%lu , valLen:%lu , vlogOffset:%lu\n" , key , tem , val.length() , getVlogOffset(key)) ; 
+		#endif
 		if(tem == getVlogOffset(key))
 		{
-			#ifdef GC_DEBUG
-				if(key != val.length()-1)
-				{
-					printf("key:%d , val:%s\n" , key , val.c_str()) ; // abort
-					assert(0) ; 
-				}
-			#endif
+				// if(key != val.length()-1)
+				// {
+
 			put(key , val) ; 	// reinsert 
 		}
 	}

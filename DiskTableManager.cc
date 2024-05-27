@@ -66,9 +66,9 @@ std::string DiskTableManager::get(uint64_t key , uint64_t * offset_ret)
 		{
 			char * sstable = cache->access(index) ; 
 			// get the offset in vlog 
-			#ifdef GC_DEBUG
-			printf("sstable:%p , offset:%d\n" , sstable , offset) ; 
-			#endif
+			// #ifdef GC_DEBUG
+			// printf("sstable:%p , offset:%d\n" , sstable , offset) ; 
+			// #endif
 			uint64_t vlogOffset = ((uint64_t *)(sstable+offset))[1] ; 
 			// get the length of value
 			uint32_t length = ((uint32_t *)(sstable+offset))[4] ; 
@@ -91,6 +91,7 @@ std::string DiskTableManager::get(uint64_t key , uint64_t * offset_ret)
 			{
 				*offset_ret = vlogOffset ; 
 			}
+
 			return result ; 
 		}
 		return result ; 		// cant find 
@@ -269,6 +270,7 @@ void DiskTableManager::scanDisk()
 				
 				timeStamp = currentTimeStamp ; 
 			}
+			fclose(sstable) ; 
 		}
 	}
 	free(buf) ; 
@@ -333,10 +335,10 @@ void DiskTableManager::compaction(int level)
 	std::vector<int> nextLevel_OVERLAP ; 			// overlap with the currentLevel
 	cache->scanLevels(level , currentLevel) ; 	
 	cache->scanLevels(level+1 , nextLevel) ; 
-	if(level != 0)					// not zero , should select the sstable with biggest timestamp . 
+	if(level != 0)					// not zero , should select the sstable with smallest timestamp . 
 	{
 		cache->shellSort(currentLevel) ; 
-		currentLevel.erase(currentLevel.begin() + size - GET_LEVEL_MAXNUM(level) , currentLevel.end()) ; 
+		currentLevel.erase(currentLevel.begin() , currentLevel.begin()+ (GET_LEVEL_MAXNUM(level))) ; 
 	}
 	uint64_t left = 0 ; 
 	uint64_t right = UINT64_MAX ; 
@@ -350,7 +352,7 @@ void DiskTableManager::compaction(int level)
 	compaction(level+1) ;			// recursively check if next level need to compaction
 }
 
-void DiskTableManager::merge(int insertLevel , const std::vector<int>& first , const std::vector<int>& second)
+void DiskTableManager::merge(int insertLevel , const std::vector<int>& first , std::vector<int>& second)
 {
 	char * singleLine = (char *)malloc(MAX_SIZE) ; 
 	int firstSize = first.size() ; 
@@ -358,16 +360,17 @@ void DiskTableManager::merge(int insertLevel , const std::vector<int>& first , c
 	int * hands = (int *)calloc(1,sizeof(int)* (firstSize + secondSize)) ; 	// save the merge's progress in each line ; the unit is key index.
 	
 	int totalKey ;
-
+	
 	while(true)
 	{
-		totalKey = generateLine(first , second , hands , singleLine) ; 
+		int relatedTableCode = -1;
+		totalKey = generateLine(first , second , hands , singleLine , relatedTableCode) ; 
 		if(totalKey <= 0)
 		{
 			break ; 
 		}
-		cache->loadCache(singleLine , insertLevel) ; 
-		writeLineToDisk(insertLevel , singleLine) ; 
+			cache->loadCache(singleLine , insertLevel) ; 
+			writeLineToDisk(insertLevel , singleLine) ; 
 		if(totalKey < KEY_MAXNUM)
 		{
 			break ; 
@@ -392,6 +395,7 @@ void DiskTableManager::writeLineToDisk(int level , char * singleLine)
 	std::string ssName(fileName) ; 
 	insertSS(level , ssName) ; 
 	formAddress(fileName , level , buf) ; 
+	
 	FILE * ssTable = fopen(buf , "w+") ; 
 	int size = SIZE(GET_KEY_NUM(singleLine)) ; 
 	fwrite(singleLine, size , 1 , ssTable) ; 
@@ -400,7 +404,8 @@ void DiskTableManager::writeLineToDisk(int level , char * singleLine)
 	free(fileName) ; 
 }
 
-int DiskTableManager::generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result)
+int DiskTableManager::generateLine(const std::vector<int>& first , const std::vector<int>& second 
+	, int * hands , char * result , int & relatedTableCode)
 {
 	int keyNum = 0 ; 
 	int length = first.size() + second.size() ; 
@@ -437,7 +442,11 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 			else if(GET_KEY(keyStart) == min){	// need to check the timeStamp when 2 key is equal
 				int selectedTime = cache->getTimeStamp(selectedCacheLine) ;
 				int currentTime = cache->getTimeStamp(index) ;  
-				assert(selectedTime != currentTime) ; 
+				if(selectedTime == currentTime)			// select the higher level's 
+				{
+					assert(selectedI < firstSize && i >= firstSize) ; 
+					hands[i] ++ ; 			// only one key can be reserved 
+				}
 				if(selectedTime > currentTime){
 					hands[i] ++ ; 			// only one key can be reserved 
 				}
@@ -463,6 +472,7 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 			{
 				timeStamp = insertTimeStamp ; 
 			}
+			
 		}
 		else{	// no more key in the array
 			break ; 
@@ -476,6 +486,7 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 	SETKEYNUM(result , keyNum) ; 
 	SETTIME(result , timeStamp) ; 
 	memcpy(result+headSize , bf.access() , bloomSize) ; 
+	relatedTableCode = -1 ;
 	return keyNum ; 
 }
 
@@ -500,26 +511,39 @@ void DiskTableManager::destroySStable(int level , const std::vector<int>& first 
 	int length2 = second.size() ; 
 	char * fileName =  (char *)malloc(BUFFER_SIZE) ; 
 	char * buf = (char *)malloc(BUFFER_SIZE) ; 
+	int currentLevel  ; 
 	for(int i = 0 ; i < length1 + length2 ; i++)
 	{
 		char * cacheLine ; 
 		if(i < length1)
 		{
+			currentLevel = level ; 
 			cacheLine = cache->access(first[i]) ; 
 		}
 		else
 		{
+			currentLevel = level+1 ; 
 			cacheLine = cache->access(second[i - length1]) ; 
 		}
 		formName(cacheLine , fileName) ; 
-		#ifdef DEBUG
-		printf("DestroySS:FormName:%s\n" , fileName) ; 
+
+		auto toRemove = std::find(levels[currentLevel].begin() , levels[currentLevel].end() , std::string(fileName)) ; 
+		auto secondFind = std::find(toRemove+1 , levels[currentLevel].end() , std::string(fileName)) ; 
+		assert(toRemove != levels[currentLevel].end()) ;
+		#ifdef GC_DEBUG
+			// printf("DestroySS:FormName:%s\n" , fileName) ; 
+			// if(secondFind != levels[currentLevel].end())
+			// {
+			// 	PRINT_LEVEL(currentLevel) ; 
+			// }
 		#endif
-		auto toRemove = std::find(levels[level].begin() , levels[level].end() , std::string(fileName)) ; 
-		assert(toRemove != levels[level].end()) ;
-		levels[level].erase(toRemove) ; 
-		formAddress(fileName , level , buf) ; 
-		utils::rmfile(std::string(buf)) ; 
+		formAddress(fileName , currentLevel , buf) ; 
+		if(secondFind == levels[currentLevel].end())		// dont have 2 same sstable name in the levels
+		{
+			utils::rmfile(std::string(buf)) ; 
+			// assert(utils::rmfile(std::string(buf))) ; 
+		}
+		levels[currentLevel].erase(toRemove) ; 
 	}
 	free(fileName) ; 
 	free(buf) ; 
@@ -565,8 +589,39 @@ void DiskTableManager::dealloc(int length)
 
 uint64_t DiskTableManager::getVlogOffset(uint64_t key)
 {
-	uint64_t vlogOffset ;
+	uint64_t vlogOffset = UINT64_MAX;
 	get(key , &vlogOffset) ; 
 
 	return vlogOffset ; 
+}
+
+// print the single level status 
+void DiskTableManager::PRINT_LEVEL(int i) const
+{
+	printf("========== PRINT SINGLE LEVEL %d ==========\n" , i) ; 
+	auto begin = levels[i].begin() ; 
+	auto end = levels[i].end() ; 
+	for(; begin != end ; begin++)
+	{
+		printf("\"%s\" " , (*begin).c_str()); 
+	}
+	printf("\n========== SINGLE LEVEL %d END ==========\n" , i) ; 
+}
+// print the whole level status
+void DiskTableManager::PRINT_STATUS() const 
+{
+	printf("========== PRINT LEVELS STATUS ==========\n") ; 
+	int length = 0 ; 
+	for(int i = 0 ;  levels[i].size()!=0 ; i++)
+	{
+		printf("Level %d:\n" , i) ; 
+		auto begin = levels[i].begin() ; 
+		auto end = levels[i].end() ; 
+		for(; begin != end ; begin++)
+		{
+			printf("\"%s\" " , (*begin).c_str()); 
+		}
+		printf("\n") ; 
+	}
+	printf("\n========== PRINT LEVEL STATUS END ==========\n") ; 
 }
