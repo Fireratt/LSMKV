@@ -257,6 +257,7 @@ void DiskTableManager::scanDisk()
 		if(!utils::dirExists(dirName))		// joint the directory address;
 		{
 			free(buf) ; 
+			level = i ; 
 			return ; 		// Not have the directory ; there will be no levels
 		}
 		std::vector<std::string> sstables ; 
@@ -375,11 +376,11 @@ void DiskTableManager::merge(int insertLevel , const std::vector<int>& first , s
 	int * hands = (int *)calloc(1,sizeof(int)* (firstSize + secondSize)) ; 	// save the merge's progress in each line ; the unit is key index.
 	
 	int totalKey ;
-	
+	int lastLevel = insertLevel > this->level ; 
 	while(true)
 	{
 		int relatedTableCode = -1;
-		totalKey = generateLine(first , second , hands , singleLine , relatedTableCode) ; 
+		totalKey = generateLine(first , second , hands , singleLine , relatedTableCode , lastLevel) ; 
 		if(totalKey <= 0)
 		{
 			break ; 
@@ -399,10 +400,11 @@ void DiskTableManager::merge(int insertLevel , const std::vector<int>& first , s
 void DiskTableManager::writeLineToDisk(int level , char * singleLine)
 {
 	char * buf = (char *)malloc(BUFFER_SIZE) ; 
-	if(levels[level].size() == 0)		// not have the unit , so it means not have the directory
+	sprintf(buf , "%s/level-%d", dir.c_str() , level) ; 
+	std::string directory(buf) ; 
+	if(!utils::dirExists(buf))		// not have the unit , so it means not have the directory
 	{
-		sprintf(buf , "%s/level-%d", dir.c_str() , level) ; 
-		std::string directory(buf) ; 
+		this->level = level ; 
 		utils::mkdir(directory) ; 
 	}
 	char * fileName = (char *)malloc(BUFFER_SIZE) ; 
@@ -420,7 +422,7 @@ void DiskTableManager::writeLineToDisk(int level , char * singleLine)
 }
 
 int DiskTableManager::generateLine(const std::vector<int>& first , const std::vector<int>& second 
-	, int * hands , char * result , int & relatedTableCode)
+	, int * hands , char * result , int & relatedTableCode , int lastLevel)
 {
 	int keyNum = 0 ; 
 	int length = first.size() + second.size() ; 
@@ -447,6 +449,11 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 			if(keyStart == 0){ 		// the key is use up 
 				hands[i] = -1 ; 
 				continue ; 
+			}
+			if(GET_VLEN(keyStart) == 0 && lastLevel)	// deleted signal
+			{
+				hands[i] ++ ; 
+				continue ;
 			}
 			if(GET_KEY(keyStart) < min){
 				min = GET_KEY(keyStart) ; 
