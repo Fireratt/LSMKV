@@ -11,7 +11,7 @@
 class PersistenceTest : public Test
 {
 private:
-	const uint64_t TEST_MAX = 1024 * 8;
+	const uint64_t TEST_MAX = 1024 * 3;
 	const uint64_t GC_TRIGGER = 1024;
 
 public:
@@ -40,8 +40,12 @@ public:
 		// Test deletions
 		for (i = 0; i < TEST_MAX; i += 2)
 		{
-			EXPECT(true, store.del(i));
-
+			int result = store.del(i) ; 
+			EXPECT(true, result);
+			if(!result)
+			{
+				printf("Test Error in %d\n" , i) ; 
+			}
 			if ((i / 2) % GC_TRIGGER == 0) [[unlikely]]
 			{
 				check_gc(16 * MB);

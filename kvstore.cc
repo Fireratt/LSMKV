@@ -146,10 +146,11 @@ void KVStore::scan(uint64_t key1, uint64_t key2, std::list<std::pair<uint64_t, s
  */
 void KVStore::gc(uint64_t chunk_size)
 {
-	#ifdef GC_DEBUG
-		printf("Trigger GC\n") ; 
-	#endif
+
 	uint64_t tail = diskManager->getVlogTail() ; 
+	#ifdef GC_DEBUG
+		printf("Trigger GC , tail:%lu head:%lu\n" , tail , diskManager->getVlogHead()) ; 
+	#endif
 	uint64_t current = tail ;
 	while(current - tail < chunk_size)
 	{
@@ -158,8 +159,8 @@ void KVStore::gc(uint64_t chunk_size)
 		std::string val ; 
 		current = diskManager->readVlogFile(current , key , val) ; 
 		#ifdef GC_DEBUG
-			if(key == 5649)
-				printf("GC: key :%lu current:%lu , valLen:%lu , vlogOffset:%lu\n" , key , tem , val.length() , getVlogOffset(key)) ; 
+			if(key == 5552)
+				printf("GC: key :%lu tem:%lu, current:%lu , valLen:%lu , vlogOffset:%lu\n" , key , tem ,current, val.length() , getVlogOffset(key)) ; 
 		#endif
 		if(tem == getVlogOffset(key))
 		{
@@ -173,7 +174,11 @@ void KVStore::gc(uint64_t chunk_size)
 	saveMem() ; 
 	bloomFilter->reset() ;
 	memtable->reset() ; 
+
 	diskManager->dealloc(current-tail) ; 
+	#ifdef GC_DEBUG
+		printf("GC End, tail:%lu head:%lu\n" , diskManager->getVlogTail() , diskManager->getVlogHead()) ; 
+	#endif
 }
 
 void KVStore::saveMem() const 

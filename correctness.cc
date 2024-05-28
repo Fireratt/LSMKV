@@ -10,7 +10,7 @@ class CorrectnessTest : public Test
 private:
 	const uint64_t SIMPLE_TEST_MAX = 512;
 	const uint64_t LARGE_TEST_MAX = 1024 * 4;
-	const uint64_t GC_TEST_MAX = 1024 * 8;
+	const uint64_t GC_TEST_MAX = 1024 * 16;
 
 	void regular_test(uint64_t max)
 	{
@@ -212,15 +212,15 @@ public:
 
 		store.reset();
 
-		// std::cout << "[Simple Test]" << std::endl;
-		// regular_test(SIMPLE_TEST_MAX);
+		std::cout << "[Simple Test]" << std::endl;
+		regular_test(SIMPLE_TEST_MAX);
 
-		// store.reset();
+		store.reset();
 
-		// std::cout << "[Large Test]" << std::endl;
-		// regular_test(LARGE_TEST_MAX);
+		std::cout << "[Large Test]" << std::endl;
+		regular_test(LARGE_TEST_MAX);
 
-		// store.reset();
+		store.reset();
 
 		std::cout << "[GC Test]" << std::endl;
 		gc_test(GC_TEST_MAX);

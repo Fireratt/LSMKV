@@ -144,6 +144,18 @@ int Cache::searchIndex(uint64_t key , int index)
     int head = 0 ; 
     int tail = cacheSize-1 ;                // last key
     int mid ;
+    if(head == tail)
+    {
+        assert(min == max) ; 
+        if(key == min)
+        {
+            return KEY_INDEX(0,offset)  ; 
+        }
+        else
+        {
+            return -1 ; 
+        }
+    }
     while(head < tail)
     {
         mid = (head + tail )/2 ; 

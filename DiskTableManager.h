@@ -12,6 +12,7 @@
 #include "splayArray.h"
 // #define DEBUG
 // #define GC_DEBUG
+// #define STRICT_MODE
 // this class was used to manage the connection between disk and memory's jumptable
 // it will be used as a proxy for memory to communicate with the cache as well 
 class DiskTableManager

@@ -1,5 +1,5 @@
 #include "DiskTableManager.h"
-#define STRICT_MODE
+// #define STRICT_MODE
 // it will pass the directory of the whole database . 
 // so we need to scan the levels of it 
 DiskTableManager::DiskTableManager(const std::string &dir, const std::string &vlog ,BloomFilter * bf):vlog(vlog)
@@ -8,7 +8,8 @@ DiskTableManager::DiskTableManager(const std::string &dir, const std::string &vl
 	this->dir = dir ; 
 	timeStamp = 0 ; 
 	cache = new Cache(MAX_SIZE , bf) ; 
-	
+	tail = 0 ; 
+	head = 0 ;
     if(utils::dirExists(dir))
 	{
 		initVlog() ; 
@@ -46,6 +47,7 @@ void DiskTableManager::initVlog()
 		if(magic==MAGIC)
 		{
 			tail = ftell(vlogFile) ; 
+			tail = tail-1 ; 			// magic not read in
 			break ; 
 		}
 		magic = fgetc(vlogFile) ; 
@@ -131,6 +133,15 @@ void DiskTableManager::write(char * sstable , splayArray * vlog , int mmSize)
 	// #endif
 	fwrite(vlog->access(),vlog->size(),1,vlogFile) ; 
 	head += vlog->size() ; 								// update the new location of vlog head after insert new vlogs
+	fseek(vlogFile , 0 , SEEK_END) ; 			// important to maintain the vlogFile's append status . 
+	#ifdef STRICT_MODE
+		if(ftell(vlogFile) != head)
+		{
+			printf("write:: , head=%lu , currentSize:%lu\n" , head , ftell(vlogFile)) ; 
+			abort() ; 
+		}
+		
+	#endif
 	rewind(F_sstable) ; 								// rewind the FILE and load it to cache
 	cache->loadCache(F_sstable) ; 						
 	timeStamp = timeStamp + 1 ; 						// update the timeStamp 
@@ -423,7 +434,7 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 		int selectedCacheLine = -1 ; 
 		for(int i = 0 ; i < length ; i++){
 			if(hands[i] == -1){		// the cacheLine is read over , dont need to access 			
-				continue ; 
+				continue; ; 
 			}
 			int index ;
 			if(i < firstSize){
@@ -446,6 +457,7 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 			else if(GET_KEY(keyStart) == min){	// need to check the timeStamp when 2 key is equal
 				int selectedTime = cache->getTimeStamp(selectedCacheLine) ;
 				int currentTime = cache->getTimeStamp(index) ;  
+				int currentVlen = GET_VLEN(keyStart) ;
 				if(selectedTime >= currentTime)			// select the higher level's 
 				{
 					hands[i] ++ ; 			// only one key can be reserved 
@@ -453,7 +465,7 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 					{
 						assert(selectedI < firstSize && i >= firstSize) ; 
 						#ifdef STRICT_MODE
-							if(min == 5649)
+							if(min == 5552)
 							{
 								printf("Generate Line key:%lu selectedOffset:%lu , currentOffset:%lu\n" 
 								,min , GET_OFFSET(selectedKey) ,GET_OFFSET(keyStart) ) ; 
@@ -461,7 +473,8 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 							assert(GET_OFFSET(selectedKey) > GET_OFFSET(keyStart) ) ; 					
 						#endif
 					}
-				}else{
+				}
+				else{
 					hands[selectedI] ++ ;
 					min = GET_KEY(keyStart) ; 
 					selectedKey = keyStart ; 
@@ -575,6 +588,17 @@ Cache* DiskTableManager::getCache()
 int DiskTableManager::readVlogFile(int offset , uint64_t& key , std::string & val) 
 {
 	char * buf = (char *)malloc(BUFFER_SIZE) ; 
+	#ifdef STRICT_MODE
+		fseek(vlogFile , offset, SEEK_SET) ; 	// to the key location 
+		fread(buf , 1,1,vlogFile) ;
+		buf[1] = 0 ;
+		// assert(buf[0] == MAGIC) ; 
+		if(buf[0]!=MAGIC)
+		{
+			printf("Error Offset Location:%lu , read:0x%x , tail:%lu , head:%lu\n",offset , buf[0], tail , head) ; 
+			assert(0) ; 
+		}
+	#endif
 	fseek(vlogFile , offset+VLOG_KEY_LOC, SEEK_SET) ; 	// to the key location 
 	fread(buf , 8 , 1 , vlogFile) ; 
 	buf[8] = 0 ; 						// make it a string end 

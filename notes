@@ -1,55 +1,72 @@
+Thread 7.1 "persistence" hit Breakpoint 1, DiskTableManager::compaction (this=this@entry=0x4283d0, level=level@entry=3) at DiskTableManager.cc:327
+327     {
+(gdb) p getVlogOffset(5552)
+$50 = 15498408
+(gdb) p cache->STATUS()
+Couldn't find method Cache::STATUS
+(gdb) p cache->PRINT_STATUS()
 ========== START PRINT CACHE STATE ==========
-total Length:50 level Length:50
-cacheLine0 : timeStamp = 108 , level = 2 , min = 1 , max = 408
-cacheLine1 : timeStamp = 98 , level = 3 , min = 0 , max = 407
-cacheLine2 : timeStamp = 60 , level = 4 , min = 0 , max = 407
-cacheLine3 : timeStamp = 109 , level = 1 , min = 409 , max = 817
-cacheLine4 : timeStamp = 98 , level = 3 , min = 409 , max = 816
-cacheLine5 : timeStamp = 110 , level = 1 , min = 3066 , max = 7232
-cacheLine6 : timeStamp = 98 , level = 3 , min = 817 , max = 1224
-cacheLine7 : timeStamp = 99 , level = 3 , min = 1225 , max = 1632
-cacheLine8 : timeStamp = 99 , level = 3 , min = 1633 , max = 2241
-cacheLine9 : timeStamp = 109 , level = 2 , min = 818 , max = 2040
-cacheLine10 : timeStamp = 105 , level = 2 , min = 4833 , max = 5240
-cacheLine11 : timeStamp = 109 , level = 2 , min = 2041 , max = 2448
-cacheLine12 : timeStamp = 96 , level = 3 , min = 3058 , max = 3465
-cacheLine13 : timeStamp = 111 , level = 1 , min = 7233 , max = 7640
-cacheLine14 : timeStamp = 84 , level = 4 , min = 408 , max = 815
-cacheLine15 : timeStamp = 109 , level = 2 , min = 2449 , max = 2856
-cacheLine16 : timeStamp = 97 , level = 3 , min = 3466 , max = 3873
-cacheLine17 : timeStamp = 104 , level = 2 , min = 4425 , max = 4832
-cacheLine18 : timeStamp = 24 , level = 4 , min = 816 , max = 1223
-cacheLine19 : timeStamp = 97 , level = 3 , min = 3874 , max = 5097
-cacheLine20 : timeStamp = 100 , level = 3 , min = 5098 , max = 5505
-cacheLine21 : timeStamp = 102 , level = 2 , min = 6934 , max = 7888
-cacheLine22 : timeStamp = 72 , level = 4 , min = 1224 , max = 1631
-cacheLine23 : timeStamp = 85 , level = 4 , min = 1632 , max = 2039
-cacheLine24 : timeStamp = 111 , level = 1 , min = 7641 , max = 7984
-cacheLine25 : timeStamp = 85 , level = 4 , min = 2040 , max = 2447
-cacheLine26 : timeStamp = 85 , level = 4 , min = 2448 , max = 2855
-cacheLine27 : timeStamp = 85 , level = 4 , min = 2856 , max = 3263
-cacheLine28 : timeStamp = 79 , level = 4 , min = 3264 , max = 3671
-cacheLine29 : timeStamp = 79 , level = 4 , min = 3672 , max = 4079
-cacheLine30 : timeStamp = 85 , level = 4 , min = 4080 , max = 4487
-cacheLine31 : timeStamp = 108 , level = 2 , min = 2857 , max = 3271
-cacheLine32 : timeStamp = 100 , level = 3 , min = 5506 , max = 5914
-cacheLine33 : timeStamp = 100 , level = 3 , min = 5915 , max = 6322
-cacheLine34 : timeStamp = 101 , level = 3 , min = 6323 , max = 6730
-cacheLine35 : timeStamp = 101 , level = 3 , min = 6731 , max = 7138
-cacheLine36 : timeStamp = 85 , level = 4 , min = 4488 , max = 4895
-cacheLine37 : timeStamp = 80 , level = 4 , min = 4896 , max = 5303
-cacheLine38 : timeStamp = 83 , level = 4 , min = 5304 , max = 5711
-cacheLine39 : timeStamp = 93 , level = 3 , min = 7139 , max = 7546
-cacheLine40 : timeStamp = 102 , level = 3 , min = 7547 , max = 8127
-cacheLine41 : timeStamp = 70 , level = 4 , min = 5712 , max = 6119
-cacheLine42 : timeStamp = 70 , level = 4 , min = 6120 , max = 6527
-cacheLine43 : timeStamp = 70 , level = 4 , min = 6528 , max = 6935
-cacheLine44 : timeStamp = 69 , level = 4 , min = 6936 , max = 7343
-cacheLine45 : timeStamp = 83 , level = 4 , min = 7344 , max = 7751
-cacheLine46 : timeStamp = 83 , level = 4 , min = 7752 , max = 8159
-cacheLine47 : timeStamp = 83 , level = 4 , min = 8160 , max = 8191
-cacheLine48 : timeStamp = 102 , level = 3 , min = 8128 , max = 8191
-cacheLine49 : timeStamp = 112 , level = 0 , min = 1 , max = 8191
+total Length:46 level Length:46
+cacheLine0 : timeStamp = 1 , level = 4 , min = 0 , max = 407
+cacheLine1 : timeStamp = 2 , level = 4 , min = 408 , max = 815
+cacheLine2 : timeStamp = 48 , level = 1 , min = 1 , max = 815
+cacheLine3 : timeStamp = 3 , level = 4 , min = 816 , max = 1223
+cacheLine4 : timeStamp = 4 , level = 4 , min = 1224 , max = 1631
+cacheLine5 : timeStamp = 5 , level = 4 , min = 1632 , max = 2039
+cacheLine6 : timeStamp = 6 , level = 4 , min = 2040 , max = 2447
+cacheLine7 : timeStamp = 7 , level = 4 , min = 2448 , max = 2855
+cacheLine8 : timeStamp = 8 , level = 4 , min = 2856 , max = 3263
+cacheLine9 : timeStamp = 9 , level = 4 , min = 3264 , max = 3671
+cacheLine10 : timeStamp = 10 , level = 4 , min = 3672 , max = 4079
+cacheLine11 : timeStamp = 11 , level = 4 , min = 4080 , max = 4487
+cacheLine12 : timeStamp = 12 , level = 4 , min = 4488 , max = 4895
+cacheLine13 : timeStamp = 13 , level = 4 , min = 4896 , max = 5303
+cacheLine14 : timeStamp = 14 , level = 4 , min = 5304 , max = 5711
+cacheLine15 : timeStamp = 16 , level = 4 , min = 5744 , max = 6151
+cacheLine16 : timeStamp = 17 , level = 3 , min = 6152 , max = 6559
+cacheLine17 : timeStamp = 18 , level = 3 , min = 6560 , max = 6967
+cacheLine18 : timeStamp = 19 , level = 3 , min = 6968 , max = 7375
+cacheLine19 : timeStamp = 20 , level = 3 , min = 7376 , max = 7783
+cacheLine20 : timeStamp = 21 , level = 3 , min = 7784 , max = 8191
+cacheLine21 : timeStamp = 36 , level = 3 , min = 0 , max = 407
+cacheLine22 : timeStamp = 36 , level = 3 , min = 408 , max = 815
+cacheLine23 : timeStamp = 37 , level = 3 , min = 816 , max = 1223
+cacheLine24 : timeStamp = 37 , level = 3 , min = 1224 , max = 1631
+cacheLine25 : timeStamp = 37 , level = 3 , min = 1632 , max = 2039
+cacheLine26 : timeStamp = 28 , level = 3 , min = 2040 , max = 2447
+cacheLine27 : timeStamp = 29 , level = 3 , min = 2448 , max = 2855
+cacheLine28 : timeStamp = 31 , level = 3 , min = 2856 , max = 3463
+cacheLine29 : timeStamp = 46 , level = 2 , min = 1634 , max = 2536
+cacheLine30 : timeStamp = 32 , level = 3 , min = 3464 , max = 3871
+cacheLine31 : timeStamp = 33 , level = 3 , min = 3872 , max = 4279
+cacheLine32 : timeStamp = 35 , level = 3 , min = 4280 , max = 4687
+cacheLine33 : timeStamp = 38 , level = 3 , min = 4688 , max = 5143
+cacheLine34 : timeStamp = 46 , level = 2 , min = 2538 , max = 4736
+cacheLine35 : timeStamp = 39 , level = 3 , min = 5144 , max = 5551
+cacheLine36 : timeStamp = 39 , level = 3 , min = 5552 , max = 5552
+cacheLine37 : timeStamp = 39 , level = 2 , min = 5553 , max = 5960
+cacheLine38 : timeStamp = 48 , level = 1 , min = 817 , max = 2136
+cacheLine39 : timeStamp = 41 , level = 2 , min = 5961 , max = 6588
+cacheLine40 : timeStamp = 47 , level = 1 , min = 2954 , max = 3768
+cacheLine41 : timeStamp = 42 , level = 2 , min = 6589 , max = 6996
+cacheLine42 : timeStamp = 44 , level = 2 , min = 6997 , max = 7428
+cacheLine43 : timeStamp = 47 , level = 1 , min = 3770 , max = 7379
+cacheLine44 : timeStamp = 47 , level = 2 , min = 7429 , max = 7836
+cacheLine45 : timeStamp = 47 , level = 2 , min = 7837 , max = 8191
 ========== Cache State Print Finish ==========
-$8 = void
-49 5 32 38
+$51 = void
+(gdb) p PRINT_STATUS()
+========== PRINT LEVELS STATUS ==========
+Level 0:
+
+Level 1:
+"48_1-815.sst" "48_817-2136.sst" "47_2954-3768.sst" "47_3770-7379.sst" 
+Level 2:
+"46_1634-2536.sst" "46_2538-4736.sst" "39_5553-5960.sst" "41_5961-6588.sst" "42_6589-6996.sst" "44_6997-7428.sst" "47_7429-7836.sst" "47_7837-8191.sst" 
+Level 3:
+"17_6152-6559.sst" "18_6560-6967.sst" "19_6968-7375.sst" "20_7376-7783.sst" "21_7784-8191.sst" "36_0-407.sst" "36_408-815.sst" "37_816-1223.sst" "37_1224-1631.sst" "37_1632-2039.sst" "28_2040-2447.sst" "29_2448-2855.sst" "31_2856-3463.sst" "32_3464-3871.sst" "33_3872-4279.sst" "35_4280-4687.sst" "38_4688-5143.sst" "39_5144-5551.sst" "39_5552-5552.sst" 
+Level 4:
+"1_0-407.sst" "2_408-815.sst" "3_816-1223.sst" "4_1224-1631.sst" "5_1632-2039.sst" "6_2040-2447.sst" "7_2448-2855.sst" "8_2856-3263.sst" "9_3264-3671.sst" "10_3672-4079.sst" "11_4080-4487.sst" "12_4488-4895.sst" "13_4896-5303.sst" "14_5304-5711.sst" "16_5744-6151.sst" 
+
+========== PRINT LEVEL STATUS END ==========
+$52 = void
