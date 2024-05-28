@@ -354,26 +354,55 @@ void Cache::getOverlap(uint64_t left , uint64_t right ,const std::vector<int>& s
 void Cache::evictTables(const std::vector<int>& sstables1 , const std::vector<int>& sstables2) 
 {
     int length = sstables1.size() + sstables2.size() ;  // calculate the size that need to delete
-    std::unordered_set<int> toDelete ;                  // record the index that need to be delete
-    std::unordered_set<int> haveParsed ; 
+    std::vector<int> toDelete ;                  // record the index that need to be delete
     int length1 = sstables1.size() ; 
     int length2 = sstables2.size() ; 
     for(int i = 0 ; i < length1 ; i++)
     {
-        toDelete.insert(sstables1[i]) ; 
+        toDelete.push_back(sstables1[i]) ; 
     }
 
     for(int i = 0 ; i < length2 ; i++)
     {
-        toDelete.insert(sstables2[i]) ; 
+        toDelete.push_back(sstables2[i]) ; 
     }
+    std::sort(toDelete.begin() ,toDelete.end() , upperSort) ; 
+
     int size = memory.size() ;
     int hand = size - 1 ; 
     auto begin = toDelete.begin() ; 
     auto end = toDelete.end() ;
     while(hand >= size - length)
     {
-        if(toDelete.find(hand) == end || haveParsed.find(hand) != haveParsed.end())          // dont have the hand in toDelete , can do the swap
+        // if(toDelete.find(hand) == end || haveParsed.find(hand) != haveParsed.end())          // dont have the hand in toDelete , can do the swap
+        // {
+        //     char * tem = memory[hand] ; 
+        //     int tem2 = levelIndex[hand] ; 
+        //     memory[hand] = memory[*begin] ; 
+        //     memory[*begin] = tem ; 
+        //     levelIndex[hand] = levelIndex[*begin] ; 
+        //     levelIndex[*begin] = tem2 ; 
+        //     haveParsed.insert(*begin) ; 
+        //     begin++ ;
+        // }
+        // else if(*begin == hand)
+        // {
+        //     begin ++ ;
+        // }
+        // // have the hand , and not the current begin . make the *begin the same , move the hand to find the insert location ; 
+        // hand -- ;
+        // #ifdef GC_DEBUG
+        //     if(sstables1[0] == 33)
+        //     {
+        //         PRINT_STATUS() ; 
+        //     }
+        // #endif
+        if(*begin == hand)  // the signal to be delete overlap the delete range
+        {
+            begin++ ; 
+            hand-- ;
+        }
+        else
         {
             char * tem = memory[hand] ; 
             int tem2 = levelIndex[hand] ; 
@@ -381,22 +410,16 @@ void Cache::evictTables(const std::vector<int>& sstables1 , const std::vector<in
             memory[*begin] = tem ; 
             levelIndex[hand] = levelIndex[*begin] ; 
             levelIndex[*begin] = tem2 ; 
-            haveParsed.insert(*begin) ; 
             begin++ ;
+            hand-- ;
         }
-        else if(*begin == hand)
-        {
-            begin ++ ;
-        }
-        // have the hand , and not the current begin . make the *begin the same , move the hand to find the insert location ; 
-        hand -- ;
-        #ifdef GC_DEBUG
-            if(sstables1[0] == 33)
-            {
-                PRINT_STATUS() ; 
-            }
-        #endif
     }
+    #ifdef GC_DEBUG
+        PRINT_VECTOR(sstables1) ; 
+        PRINT_VECTOR(sstables2) ; 
+        PRINT_VECTOR(toDelete) ; 
+        PRINT_STATUS() ; 
+    #endif 
     // all the evict line at the end , pop them 
     memory.erase(memory.end() - length , memory.end()) ; 
     levelIndex.erase(levelIndex.end() - length , levelIndex.end()) ; 
@@ -439,7 +462,8 @@ void Cache::PRINT_STATUS()
     printf("total Length:%d level Length:%d\n" , length , levelIndex.size()) ; 
     for(int i = 0 ; i < length ; i++)
     {
-        printf("cacheLine%d : timeStamp = %lu , level = %d\n" , i , getTimeStamp(i) , levelIndex[i]) ;
+        printf("cacheLine%d : timeStamp = %lu , level = %d , min = %d , max = %d\n" , i , getTimeStamp(i) , levelIndex[i]
+            , getMin(i) , getMax(i)) ;
     }
     printf("========== Cache State Print Finish ==========\n") ; 
 }

@@ -1,4 +1,5 @@
 #include "DiskTableManager.h"
+#define STRICT_MODE
 // it will pass the directory of the whole database . 
 // so we need to scan the levels of it 
 DiskTableManager::DiskTableManager(const std::string &dir, const std::string &vlog ,BloomFilter * bf):vlog(vlog)
@@ -348,7 +349,10 @@ void DiskTableManager::compaction(int level)
 	merge(level + 1 , currentLevel , nextLevel_OVERLAP) ; 
 	destroySStable(level,currentLevel , nextLevel_OVERLAP) ; 
 	cache->evictTables(currentLevel , nextLevel_OVERLAP) ; 
-	
+	#ifdef GC_DEBUG
+		PRINT_STATUS() ; 
+		cache->PRINT_STATUS() ; 
+	#endif
 	compaction(level+1) ;			// recursively check if next level need to compaction
 }
 
@@ -442,15 +446,22 @@ int DiskTableManager::generateLine(const std::vector<int>& first , const std::ve
 			else if(GET_KEY(keyStart) == min){	// need to check the timeStamp when 2 key is equal
 				int selectedTime = cache->getTimeStamp(selectedCacheLine) ;
 				int currentTime = cache->getTimeStamp(index) ;  
-				if(selectedTime == currentTime)			// select the higher level's 
+				if(selectedTime >= currentTime)			// select the higher level's 
 				{
-					assert(selectedI < firstSize && i >= firstSize) ; 
 					hands[i] ++ ; 			// only one key can be reserved 
-				}
-				if(selectedTime > currentTime){
-					hands[i] ++ ; 			// only one key can be reserved 
-				}
-				else{
+					if(selectedTime == currentTime)
+					{
+						assert(selectedI < firstSize && i >= firstSize) ; 
+						#ifdef STRICT_MODE
+							if(min == 5649)
+							{
+								printf("Generate Line key:%lu selectedOffset:%lu , currentOffset:%lu\n" 
+								,min , GET_OFFSET(selectedKey) ,GET_OFFSET(keyStart) ) ; 
+							}
+							assert(GET_OFFSET(selectedKey) > GET_OFFSET(keyStart) ) ; 					
+						#endif
+					}
+				}else{
 					hands[selectedI] ++ ;
 					min = GET_KEY(keyStart) ; 
 					selectedKey = keyStart ; 
@@ -529,9 +540,16 @@ void DiskTableManager::destroySStable(int level , const std::vector<int>& first 
 
 		auto toRemove = std::find(levels[currentLevel].begin() , levels[currentLevel].end() , std::string(fileName)) ; 
 		auto secondFind = std::find(toRemove+1 , levels[currentLevel].end() , std::string(fileName)) ; 
-		assert(toRemove != levels[currentLevel].end()) ;
 		#ifdef GC_DEBUG
-			// printf("DestroySS:FormName:%s\n" , fileName) ; 
+		printf("DestroySS:FormName:%s\n" , fileName) ; 
+			if(toRemove == levels[currentLevel].end())
+			{
+				PRINT_STATUS() ; 
+				cache->PRINT_STATUS() ; 
+				assert(0) ;
+			}
+		#endif
+		#ifdef GC_DEBUG
 			// if(secondFind != levels[currentLevel].end())
 			// {
 			// 	PRINT_LEVEL(currentLevel) ; 
@@ -612,7 +630,7 @@ void DiskTableManager::PRINT_STATUS() const
 {
 	printf("========== PRINT LEVELS STATUS ==========\n") ; 
 	int length = 0 ; 
-	for(int i = 0 ;  levels[i].size()!=0 ; i++)
+	for(int i = 0 ;  i < 5 ; i++)
 	{
 		printf("Level %d:\n" , i) ; 
 		auto begin = levels[i].begin() ; 

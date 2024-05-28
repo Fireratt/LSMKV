@@ -158,7 +158,7 @@ void KVStore::gc(uint64_t chunk_size)
 		std::string val ; 
 		current = diskManager->readVlogFile(current , key , val) ; 
 		#ifdef GC_DEBUG
-			if(key == 4001)
+			if(key == 5649)
 				printf("GC: key :%lu current:%lu , valLen:%lu , vlogOffset:%lu\n" , key , tem , val.length() , getVlogOffset(key)) ; 
 		#endif
 		if(tem == getVlogOffset(key))

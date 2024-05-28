@@ -10,7 +10,7 @@ class CorrectnessTest : public Test
 private:
 	const uint64_t SIMPLE_TEST_MAX = 512;
 	const uint64_t LARGE_TEST_MAX = 1024 * 4;
-	const uint64_t GC_TEST_MAX = 1024 * 4;
+	const uint64_t GC_TEST_MAX = 1024 * 8;
 
 	void regular_test(uint64_t max)
 	{
@@ -167,6 +167,11 @@ private:
 			{
 			case 0:
 				EXPECT(std::string(i + 1, 'e'), store.get(i));
+				if(store.get(i)!= std::string(i + 1, 'e'))
+				{
+					printf("Error When delete(%d)" , i) ; 
+					printf("Try to get the offset:%d\n" , store.getVlogOffset(i)) ; 
+				}
 				break;
 			case 1:
 				EXPECT(std::string(i + 1, '2'), store.get(i));

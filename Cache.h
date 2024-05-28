@@ -4,7 +4,7 @@
 #include <cassert>
 #include <string.h>
 #include <vector>
-#include <unordered_set>
+#include <set>
 
 #include <stdint.h>
 #include <algorithm>
@@ -23,11 +23,7 @@ class Cache
         int loaded ;                            // current loaded Number ; 
         BloomFilter * bf ;                      // the bloomFilter used to check for the key ; it will use a static method 
 
-        // get the index according to the key ; if cant find it in the Cache , return 0. if may in it return the list in the variable and return 1.
-        // The end tag of indexList is -1
-        int getIndex(uint64_t key , int * indexList);
-        // memory[index] dont have the key => return -1 . else return the offset of the key 
-        int searchIndex(uint64_t key , int index) ; 
+
     public :
         Cache(int unitSize, BloomFilter * bf) ;           // Construct Cache according to n(maxNum) and unitSize
         void loadCache(FILE* toLoad , int level = 0) ;          // Load a File in the Cache , the index still valid
@@ -71,5 +67,10 @@ class Cache
         char * getKey(int keyIndex , int cacheLineIndex ) ; 
         // print the status for the memory
         void PRINT_STATUS() ; 
+                // get the index according to the key ; if cant find it in the Cache , return 0. if may in it return the list in the variable and return 1.
+        // The end tag of indexList is -1
+        int getIndex(uint64_t key , int * indexList);
+        // memory[index] dont have the key => return -1 . else return the offset of the key 
+        int searchIndex(uint64_t key , int index) ; 
 };
 

@@ -30,3 +30,20 @@ void STR_DeepCopy(char * buffer , std::string & ret)
     ret[0] = ' ' ; 
     ret[0] = placeHolder ;
 }
+
+bool upperSort(int a , int b)
+{
+    return a > b ; 
+}
+
+void PRINT_VECTOR(const std::vector<int>& toPrint)
+{
+    auto begin = toPrint.begin() ; 
+    auto end = toPrint.end() ; 
+    printf("Print Vector<int> Status , length:%lu\n" , toPrint.size()) ;
+    for(; begin!= end ; begin++)
+    {
+        printf(" %d" , *begin) ; 
+    }
+    printf("\nPrint Vector End\n") ; 
+}

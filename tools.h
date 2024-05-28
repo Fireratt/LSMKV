@@ -13,3 +13,5 @@ bool isOverlap(int min1 , int max1 , int min2 , int max2) ;
 // utilize the write copy 
 void STR_DeepCopy(char * buffer , std::string & ret) ; 
 bool compareKey(std::pair<uint64_t, std::string>& a , std::pair<uint64_t, std::string>& b) ; 
+bool upperSort(int a , int b) ; 
+void PRINT_VECTOR(const std::vector<int>& toPrint) ; 

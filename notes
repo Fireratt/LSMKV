@@ -1,34 +1,55 @@
-cacheLine0 : timeStamp = 1 , level = 4
-cacheLine1 : timeStamp = 3 , level = 3
-cacheLine2 : timeStamp = 5 , level = 3
-cacheLine3 : timeStamp = 6 , level = 3
-cacheLine4 : timeStamp = 2 , level = 4
-cacheLine5 : timeStamp = 8 , level = 3
-cacheLine6 : timeStamp = 9 , level = 3
-cacheLine7 : timeStamp = 4 , level = 3
-cacheLine8 : timeStamp = 11 , level = 3
-cacheLine9 : timeStamp = 12 , level = 3
-cacheLine10 : timeStamp = 7 , level = 3
-cacheLine11 : timeStamp = 14 , level = 3
-cacheLine12 : timeStamp = 16 , level = 3
-cacheLine13 : timeStamp = 10 , level = 3
-cacheLine14 : timeStamp = 13 , level = 3
-cacheLine15 : timeStamp = 21 , level = 2
-cacheLine16 : timeStamp = 20 , level = 2
-cacheLine17 : timeStamp = 17 , level = 3
-cacheLine18 : timeStamp = 33 , level = 1
-cacheLine19 : timeStamp = 18 , level = 3
-cacheLine20 : timeStamp = 19 , level = 3
-cacheLine21 : timeStamp = 24 , level = 2
-cacheLine22 : timeStamp = 23 , level = 2
-cacheLine23 : timeStamp = 22 , level = 2
-cacheLine24 : timeStamp = 27 , level = 2
-cacheLine25 : timeStamp = 26 , level = 2
-cacheLine26 : timeStamp = 25 , level = 2
-cacheLine27 : timeStamp = 30 , level = 2
-cacheLine28 : timeStamp = 29 , level = 2
-cacheLine29 : timeStamp = 28 , level = 2
-cacheLine30 : timeStamp = 31 , level = 1
-cacheLine31 : timeStamp = 32 , level = 1
-cacheLine32 : timeStamp = 33 , level = 1
-cacheLine33 : timeStamp = 22 , level = 3
+========== START PRINT CACHE STATE ==========
+total Length:50 level Length:50
+cacheLine0 : timeStamp = 108 , level = 2 , min = 1 , max = 408
+cacheLine1 : timeStamp = 98 , level = 3 , min = 0 , max = 407
+cacheLine2 : timeStamp = 60 , level = 4 , min = 0 , max = 407
+cacheLine3 : timeStamp = 109 , level = 1 , min = 409 , max = 817
+cacheLine4 : timeStamp = 98 , level = 3 , min = 409 , max = 816
+cacheLine5 : timeStamp = 110 , level = 1 , min = 3066 , max = 7232
+cacheLine6 : timeStamp = 98 , level = 3 , min = 817 , max = 1224
+cacheLine7 : timeStamp = 99 , level = 3 , min = 1225 , max = 1632
+cacheLine8 : timeStamp = 99 , level = 3 , min = 1633 , max = 2241
+cacheLine9 : timeStamp = 109 , level = 2 , min = 818 , max = 2040
+cacheLine10 : timeStamp = 105 , level = 2 , min = 4833 , max = 5240
+cacheLine11 : timeStamp = 109 , level = 2 , min = 2041 , max = 2448
+cacheLine12 : timeStamp = 96 , level = 3 , min = 3058 , max = 3465
+cacheLine13 : timeStamp = 111 , level = 1 , min = 7233 , max = 7640
+cacheLine14 : timeStamp = 84 , level = 4 , min = 408 , max = 815
+cacheLine15 : timeStamp = 109 , level = 2 , min = 2449 , max = 2856
+cacheLine16 : timeStamp = 97 , level = 3 , min = 3466 , max = 3873
+cacheLine17 : timeStamp = 104 , level = 2 , min = 4425 , max = 4832
+cacheLine18 : timeStamp = 24 , level = 4 , min = 816 , max = 1223
+cacheLine19 : timeStamp = 97 , level = 3 , min = 3874 , max = 5097
+cacheLine20 : timeStamp = 100 , level = 3 , min = 5098 , max = 5505
+cacheLine21 : timeStamp = 102 , level = 2 , min = 6934 , max = 7888
+cacheLine22 : timeStamp = 72 , level = 4 , min = 1224 , max = 1631
+cacheLine23 : timeStamp = 85 , level = 4 , min = 1632 , max = 2039
+cacheLine24 : timeStamp = 111 , level = 1 , min = 7641 , max = 7984
+cacheLine25 : timeStamp = 85 , level = 4 , min = 2040 , max = 2447
+cacheLine26 : timeStamp = 85 , level = 4 , min = 2448 , max = 2855
+cacheLine27 : timeStamp = 85 , level = 4 , min = 2856 , max = 3263
+cacheLine28 : timeStamp = 79 , level = 4 , min = 3264 , max = 3671
+cacheLine29 : timeStamp = 79 , level = 4 , min = 3672 , max = 4079
+cacheLine30 : timeStamp = 85 , level = 4 , min = 4080 , max = 4487
+cacheLine31 : timeStamp = 108 , level = 2 , min = 2857 , max = 3271
+cacheLine32 : timeStamp = 100 , level = 3 , min = 5506 , max = 5914
+cacheLine33 : timeStamp = 100 , level = 3 , min = 5915 , max = 6322
+cacheLine34 : timeStamp = 101 , level = 3 , min = 6323 , max = 6730
+cacheLine35 : timeStamp = 101 , level = 3 , min = 6731 , max = 7138
+cacheLine36 : timeStamp = 85 , level = 4 , min = 4488 , max = 4895
+cacheLine37 : timeStamp = 80 , level = 4 , min = 4896 , max = 5303
+cacheLine38 : timeStamp = 83 , level = 4 , min = 5304 , max = 5711
+cacheLine39 : timeStamp = 93 , level = 3 , min = 7139 , max = 7546
+cacheLine40 : timeStamp = 102 , level = 3 , min = 7547 , max = 8127
+cacheLine41 : timeStamp = 70 , level = 4 , min = 5712 , max = 6119
+cacheLine42 : timeStamp = 70 , level = 4 , min = 6120 , max = 6527
+cacheLine43 : timeStamp = 70 , level = 4 , min = 6528 , max = 6935
+cacheLine44 : timeStamp = 69 , level = 4 , min = 6936 , max = 7343
+cacheLine45 : timeStamp = 83 , level = 4 , min = 7344 , max = 7751
+cacheLine46 : timeStamp = 83 , level = 4 , min = 7752 , max = 8159
+cacheLine47 : timeStamp = 83 , level = 4 , min = 8160 , max = 8191
+cacheLine48 : timeStamp = 102 , level = 3 , min = 8128 , max = 8191
+cacheLine49 : timeStamp = 112 , level = 0 , min = 1 , max = 8191
+========== Cache State Print Finish ==========
+$8 = void
+49 5 32 38
