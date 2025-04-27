@@ -42,6 +42,7 @@ class DiskTableManager
 
         // the current , biggest TimeStamp ; 
         int timeStamp ; 
+        int level ; 
     public :
         DiskTableManager(const std::string &dir, const std::string &vlog , BloomFilter * bf) ; 
         ~DiskTableManager() ; 
@@ -82,7 +83,8 @@ class DiskTableManager
         void merge(int insertLevel , const std::vector<int>& first , std::vector<int>& second) ; 
         // generate a singleline from the merge . Hands and results should be malloced previously
         // it will return a error code in the parameter
-        int generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands , char * result , int& relatedTableCode) ;
+        int generateLine(const std::vector<int>& first , const std::vector<int>& second , int * hands 
+            , char * result , int& relatedTableCode , int lastLevel) ;
         // write a cacheline to the specific level
         void writeLineToDisk(int level , char * singleLine) ; 
         // get the cache
